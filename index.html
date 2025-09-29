@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mara’Lanca – 4 femmes, 1 défi : le désert marocain | Rallye Aïcha des Gazelles 2027</title>
+    <meta name="description"
+        content="Mara’Lanca : 4 femmes des Landes en route pour le Rallye Aïcha des Gazelles 2027. Suivez l’aventure, soutenez Cœur de Gazelles et devenez partenaire." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --sand: #D6A36A;
+            --night: #1D3557;
+            --cream: #FAF7F3;
+            --ink: #0F172A;
+            --mute: #5f6b7a;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            --radius: 18px;
+            --radius-lg: 22px;
+            --gap: clamp(16px, 2vw, 28px);
+            --container: min(1140px, 92vw);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility */
+        .container {
+            width: var(--container);
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .9rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+
+        .btn-primary {
+            background: var(--night);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #13253f;
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, .85);
+            color: var(--night);
+            border-color: rgba(0, 0, 0, .06);
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: .35rem .7rem;
+            font-size: .82rem;
+            border-radius: 999px;
+            background: #f1ece6;
+            color: #7a5d3a;
+            font-weight: 600;
+            letter-spacing: .2px;
+        }
+
+        /* Header */
+        header.site {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: saturate(180%) blur(8px);
+            background: rgba(250, 247, 243, .7);
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .8rem 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            font-weight: 800;
+            letter-spacing: .2px;
+            color: var(--night);
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--sand), #f0c28f);
+            display: grid;
+            place-items: center;
+            color: #523b1f;
+            font-weight: 800;
+            box-shadow: var(--shadow);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 600;
+            opacity: .9;
+            padding: .5rem .75rem;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            background: rgba(0, 0, 0, .04);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: var(--gap);
+            padding: clamp(48px, 8vw, 96px) 0;
+            align-items: center;
+        }
+
+        .hero-card {
+            background: #fff;
+            padding: clamp(24px, 3vw, 36px);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4.2vw, 3.4rem);
+            line-height: 1.1;
+            margin: 0 0 .75rem;
+            color: var(--night);
+        }
+
+        .hero p.lead {
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            color: var(--mute);
+            margin: 0 0 1.25rem;
+        }
+
+        .hero .cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .7rem;
+            margin-top: .75rem;
+        }
+
+        .hero-media {
+            position: relative;
+            height: 420px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-media::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(80% 80% at 70% 20%, rgba(214, 163, 106, .15), transparent 60%), linear-gradient(180deg, rgba(29, 53, 87, .25), rgba(29, 53, 87, .05));
+            z-index: 2;
+        }
+
+        .hero-media .ph {
+            position: absolute;
+            inset: 0;
+            background:
+                url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            filter: saturate(95%) contrast(95%);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+            margin-top: 1rem;
+        }
+
+        .stat {
+            background: #fff;
+            padding: 18px 20px;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .stat h3 {
+            margin: .2rem 0 0;
+            font-size: 1.15rem;
+            color: var(--night);
+        }
+
+        .stat .n {
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+
+        /* Sections */
+        section {
+            padding: clamp(42px, 7vw, 92px) 0;
+        }
+
+        .sec-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: clamp(20px, 4vw, 34px);
+        }
+
+        .sec-head h2 {
+            margin: 0;
+            font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+            color: var(--night);
+        }
+
+        .sec-head p {
+            margin: 0;
+            color: var(--mute);
+            max-width: 60ch;
+        }
+
+        /* Team */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--gap);
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card .img {
+            height: 220px;
+            background: linear-gradient(120deg, #e7e0d7, #f5efe9);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            color: #81603a;
+            letter-spacing: .5px;
+        }
+
+        .card .body {
+            padding: 18px;
+        }
+
+        .role {
+            font-size: .9rem;
+            color: var(--mute);
+            margin-top: 4px;
+        }
+
+        /* Rallye */
+        .rally {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: var(--gap);
+            align-items: center;
+        }
+
+        .timeline {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            gap: .9rem;
+            align-items: start;
+            padding: 12px 6px;
+            border-left: 3px solid #efeadf;
+            margin-left: 10px;
+        }
+
+        .step .dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--sand);
+            display: grid;
+            place-items: center;
+            color: #54391f;
+            font-weight: 800;
+            font-size: .8rem;
+            translate: -13px 0;
+            box-shadow: 0 4px 10px rgba(214, 163, 106, .35);
+        }
+
+        .step h4 {
+            margin: .2rem 0 .25rem;
+        }
+
+        /* Cause */
+        .cause {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: var(--gap);
+            align-items: center;
+        }
+
+        .cause .panel {
+            background: #fff;
+            padding: 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Partners */
+        .logos {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+        }
+
+        .logo {
+            background: #fff;
+            height: 70px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: grid;
+            place-items: center;
+            color: #9aa3ad;
+            font-weight: 700;
+            letter-spacing: .4px;
+        }
+
+        .tiers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+            margin-top: var(--gap);
+        }
+
+        .tier {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+        }
+
+        .tier h4 {
+            margin: .2rem 0 .6rem;
+        }
+
+        .tier ul {
+            margin: 0;
+            padding-left: 1.1rem;
+            color: var(--mute);
+        }
+
+        /* News */
+        .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+
+        .post {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post .cover {
+            height: 180px;
+            background: linear-gradient(130deg, #e9edf3, #f6f8fb);
+        }
+
+        .post .body {
+            padding: 18px;
+        }
+
+        /* Contact */
+        .contact {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: var(--gap);
+        }
+
+        form {
+            background: #fff;
+            padding: 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .9rem;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        label {
+            font-size: .92rem;
+            font-weight: 600;
+            color: var(--night);
+            display: block;
+            margin-bottom: .25rem;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: .85rem .95rem;
+            border-radius: 12px;
+            border: 1px solid #e7e2da;
+            background: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .aside {
+            background: linear-gradient(180deg, var(--night), #263d64);
+            color: #e8eef8;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .aside h3 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .list {
+            margin: 0;
+            padding-left: 1.15rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 36px 0 48px;
+            color: #6b7686;
+        }
+
+        .foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal.on {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            .hero .wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .rally,
+            .cause,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .team {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .tiers {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-media {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav ul {
+                display: none;
+            }
+
+            .team,
+            .news {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site">
+        <div class="container nav">
+            <a href="#" class="brand" aria-label="Accueil Mara’Lanca">
+                <div class="brand-mark">ML</div>
+                <span>Mara’Lanca</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#equipe">Équipe</a></li>
+                    <li><a href="#rallye">Rallye</a></li>
+                    <li><a href="#cause">Cause</a></li>
+                    <li><a href="#partenaires">Partenaires</a></li>
+                    <li><a href="#journal">Journal</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-primary" href="#contact">Devenir sponsor</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container wrap">
+                <div class="hero-card reveal">
+                    <span class="chip">Rallye Aïcha des Gazelles 2027</span>
+                    <h1>4 femmes, 1 défi : <br>le désert marocain.</h1>
+                    <p class="lead">Nous sommes <strong>les Mara’Lanca</strong>, 4 Landaises prêtes à traverser le
+                        désert en 4x4 pour soutenir <strong>Cœur de Gazelles</strong>. Suivez l’aventure, vibrez avec
+                        nous et aidez-nous à faire rayonner nos Landes. 🌍</p>
+                    <div class="cta">
+                        <a class="btn btn-primary" href="#partenaires">Voir les contreparties sponsors</a>
+                        <a class="btn btn-ghost" href="#journal">Suivre l’aventure</a>
+                    </div>
+                    <div class="stats" role="list">
+                        <div class="stat" role="listitem">
+                            <div class="n">2027</div>
+                            <h3>Objectif départ</h3>
+                        </div>
+                        <div class="stat" role="listitem">
+                            <div class="n">100% féminin</div>
+                            <h3>Écoresponsable</h3>
+                        </div>
+                        <div class="stat" role="listitem">
+                            <div class="n">Solidarité</div>
+                            <h3>Cœur de Gazelles</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media reveal" aria-label="Photo désert marocain">
+                    <div class="ph" role="img" aria-label="4x4 dans les dunes du désert marocain"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="equipe" class="container">
+            <div class="sec-head">
+                <h2>L’équipe Mara’Lanca</h2>
+                <p>Quatre profils complémentaires, une même énergie. Découvrez celles qui vont tracer la route… et le
+                    sable.</p>
+            </div>
+            <div class="team">
+                <article class="card reveal">
+                    <div class="img">PORTRAIT</div>
+                    <div class="body">
+                        <h3>Prénom Nom</h3>
+                        <div class="role">Pilote – Logistique & Partenariats</div>
+                    </div>
+                </article>
+                <article class="card reveal">
+                    <div class="img">PORTRAIT</div>
+                    <div class="body">
+                        <h3>Prénom Nom</h3>
+                        <div class="role">Co‑pilote – Navigation & Sécurité</div>
+                    </div>
+                </article>
+                <article class="card reveal">
+                    <div class="img">PORTRAIT</div>
+                    <div class="body">
+                        <h3>Prénom Nom</h3>
+                        <div class="role">Communication – Réseaux & Presse</div>
+                    </div>
+                </article>
+                <article class="card reveal">
+                    <div class="img">PORTRAIT</div>
+                    <div class="body">
+                        <h3>Prénom Nom</h3>
+                        <div class="role">Partenariats – Mécénat & Événementiel</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- RALLYE -->
+        <section id="rallye" class="container">
+            <div class="sec-head">
+                <h2>Rallye Aïcha des Gazelles</h2>
+                <p>Le seul rallye‑raid 100% féminin, sans GPS, au cœur du Maroc. Orientation, entraide, sobriété carbone
+                    et impact social.</p>
+            </div>
+            <div class="rally">
+                <div class="timeline reveal">
+                    <div class="step">
+                        <div class="dot">25</div>
+                        <div>
+                            <h4>2025 — Préparation</h4>
+                            <p>Formation navigation, choix du 4x4, premiers entraînements sable et structuration du
+                                projet.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="dot">26</div>
+                        <div>
+                            <h4>2026 — Partenaires & Entraînement</h4>
+                            <p>Consolidation des sponsors, actions locales, médiatisation et simulations en conditions
+                                réelles.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="dot">27</div>
+                        <div>
+                            <h4>2027 — Le Départ</h4>
+                            <p>Cap sur le désert marocain : franchissement, navigation à l’ancienne et aventure humaine
+                                inoubliable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="chip" style="margin-bottom:.6rem">Impact & valeurs</div>
+                    <h3 style="margin:0 0 .5rem; color:var(--night)">Au‑delà de la course : une mission</h3>
+                    <p style="color:var(--mute)">Chaque kilomètre compte. Nous soutenons <strong>Cœur de
+                            Gazelles</strong> : actions médicales, solidarité et aide aux populations locales. Notre
+                        aventure donne de la voix à celles et ceux qui en ont le plus besoin.</p>
+                    <div class="cta" style="margin-top:1rem">
+                        <a class="btn btn-primary" href="#cause">Découvrir la cause</a>
+                        <a class="btn" style="border-color:#e7e2da" href="#partenaires">Devenir partenaire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAUSE -->
+        <section id="cause" class="container">
+            <div class="sec-head">
+                <h2>Cœur de Gazelles ❤️</h2>
+                <p>Association reconnue d’intérêt général, adossée au Rallye Aïcha des Gazelles. Des caravanes médicales
+                    et des projets concrets au Maroc.</p>
+            </div>
+            <div class="cause">
+                <div class="panel reveal">
+                    <h3 style="margin-top:0">Pourquoi cette cause ?</h3>
+                    <p>Parce que l’aventure n’a de sens que si elle est utile. À travers Cœur de Gazelles, nous
+                        soutenons des <strong>missions médicales</strong>, la <strong>scolarisation</strong> et
+                        l’<strong>aide aux femmes</strong> dans les zones enclavées.</p>
+                    <ul class="list">
+                        <li>Caravanes médicales itinérantes</li>
+                        <li>Distribution de matériel et fournitures</li>
+                        <li>Actions solidaires durables</li>
+                    </ul>
+                    <div class="cta" style="margin-top:1rem">
+                        <a class="btn btn-primary" href="#contact">Nous aider à aider</a>
+                        <a class="btn" style="border-color:#e7e2da" href="#">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="panel reveal">
+                    <h3 style="margin-top:0">Transparence & traçabilité</h3>
+                    <p>Nos partenaires reçoivent des <strong>bilans réguliers</strong> des actions et de la visibilité :
+                        retombées presse, réseaux sociaux, événements, et chiffres clés.</p>
+                    <div class="stats" style="margin-top:.5rem">
+                        <div class="stat">
+                            <div class="n">#Presse</div>
+                            <h3>Dossiers & articles</h3>
+                        </div>
+                        <div class="stat">
+                            <div class="n">#Social</div>
+                            <h3>Stories & reels</h3>
+                        </div>
+                        <div class="stat">
+                            <div class="n">#Local</div>
+                            <h3>Actions terrain</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section id="partenaires" class="container">
+            <div class="sec-head">
+                <h2>Ils nous soutiennent</h2>
+                <p>Des entreprises engagées qui partagent nos valeurs. Rejoignez l’aventure, votre marque au cœur des
+                    dunes.</p>
+            </div>
+            <div class="logos reveal" aria-label="Logos partenaires">
+                <div class="logo">LOGO</div>
+                <div class="logo">LOGO</div>
+                <div class="logo">LOGO</div>
+                <div class="logo">LOGO</div>
+                <div class="logo">LOGO</div>
+                <div class="logo">LOGO</div>
+            </div>
+
+            <div class="tiers">
+                <div class="tier reveal">
+                    <h4>Pack Bronze</h4>
+                    <ul>
+                        <li>Logo site + remerciements réseaux</li>
+                        <li>Sticker 4x4 (format M)</li>
+                        <li>Invitation à un live privé</li>
+                    </ul>
+                </div>
+                <div class="tier reveal">
+                    <h4>Pack Argent</h4>
+                    <ul>
+                        <li>Visibilité renforcée (site + stories dédiées)</li>
+                        <li>Sticker 4x4 (format L) + photos brandées</li>
+                        <li>Accès coulisses (newsletter partenaire)</li>
+                    </ul>
+                </div>
+                <div class="tier reveal">
+                    <h4>Pack Or</h4>
+                    <ul>
+                        <li>Logo premium (4x4 + tenue + site)</li>
+                        <li>Vidéo dédiée + interview</li>
+                        <li>Présence événements & RP locales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta" style="margin-top:1rem">
+                <a class="btn btn-primary" href="#contact">Demander le kit sponsor</a>
+                <a class="btn" style="border-color:#e7e2da" href="#journal">Voir nos actualités</a>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section id="journal" class="container">
+            <div class="sec-head">
+                <h2>Journal de bord</h2>
+                <p>Préparation, entraînements, rencontres, solidarité : on raconte tout ici.</p>
+            </div>
+            <div class="news">
+                <article class="post reveal">
+                    <div class="cover"></div>
+                    <div class="body">
+                        <h3>Entraînement navigation – boussole & carte</h3>
+                        <p style="color:var(--mute)">Session au roadbook, apprentissage cap/azimut, gestion du terrain.
+                            On progresse !</p>
+                    </div>
+                </article>
+                <article class="post reveal">
+                    <div class="cover"></div>
+                    <div class="body">
+                        <h3>Rencontre avec une asso locale</h3>
+                        <p style="color:var(--mute)">On tisse les liens avec le territoire : actions communes et relais
+                            solidaires.</p>
+                    </div>
+                </article>
+                <article class="post reveal">
+                    <div class="cover"></div>
+                    <div class="body">
+                        <h3>Choix du 4x4 : critères & fiabilité</h3>
+                        <p style="color:var(--mute)">Autonomie, franchissement, maintenance : on partage nos critères et
+                            le shortlist.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container">
+            <div class="sec-head">
+                <h2>Nous contacter / Soutenir</h2>
+                <p>Une idée, une envie de partenariat, une question média ? Écrivez‑nous : on répond vite.</p>
+            </div>
+            <div class="contact">
+                <form class="reveal"
+                    onsubmit="event.preventDefault(); alert('Merci ! Votre message a bien été envoyé.'); this.reset();">
+                    <div class="grid">
+                        <div>
+                            <label for="nom">Nom / Société</label>
+                            <input id="nom" name="nom" placeholder="Votre nom ou celui de votre entreprise" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div>
+                            <label for="type">Je suis…</label>
+                            <select id="type" name="type">
+                                <option>Partenaire potentiel</option>
+                                <option>Média / Presse</option>
+                                <option>Bénévole / Coup de pouce</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tel">Téléphone (optionnel)</label>
+                            <input id="tel" name="tel" placeholder="06 12 34 56 78">
+                        </div>
+                    </div>
+                    <div class="grid grid-1">
+                        <div>
+                            <label for="msg">Message</label>
+                            <textarea id="msg" name="message" placeholder="Dites‑nous en plus…"></textarea>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:.6rem; margin:.4rem 0 1rem;">
+                        <input id="kit" type="checkbox"> <label for="kit" style="margin:0; font-weight:500">Recevoir le
+                            kit média PDF</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Envoyer</button>
+                </form>
+
+                <aside class="aside reveal">
+                    <h3>Suivre l’aventure</h3>
+                    <p>On partage les coulisses sur nos réseaux : entraînements, rencontres, solidarité, et moments qui
+                        comptent.</p>
+                    <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
+                        <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
+                        <a class="btn btn-ghost" href="#" aria-label="TikTok">TikTok</a>
+                        <a class="btn btn-ghost" href="#" aria-label="Facebook">Facebook</a>
+                        <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
+                    </div>
+                    <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
+                    <h3>Devenir partenaire</h3>
+                    <ul class="list">
+                        <li>Visibilité (site, réseaux, 4x4)</li>
+                        <li>Contenus exclusifs & RP locales</li>
+                        <li>Reporting de l’impact et des retombées</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container foot">
+            <div>© <span id="year"></span> Mara’Lanca — Tous droits réservés.</div>
+            <div style="opacity:.8">Design & accompagnement : <strong>R4 Consulting</strong></div>
+        </div>
+    </footer>
+
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Reveal on scroll
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+        }, { threshold: .18 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // Subtle header shadow on scroll
+        const siteHeader = document.querySelector('header.site');
+        let lastY = 0;
+        addEventListener('scroll', () => {
+            const y = scrollY;
+            if (y > 8 && lastY <= 8) siteHeader.style.boxShadow = '0 8px 20px rgba(0,0,0,.06)';
+            if (y <= 8 && lastY > 8) siteHeader.style.boxShadow = 'none';
+            lastY = y;
+        });
+    </script>
+</body>
+
+</html>
