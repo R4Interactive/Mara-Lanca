@@ -15,6 +15,16 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Favicon & Social preview -->
+    <link rel="icon" href="/assets/favicon-ml.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-ml.png" sizes="180x180">
+    <meta property="og:title" content="Mara’Lanca – Rallye Aïcha des Gazelles 2027">
+    <meta property="og:description"
+        content="4 femmes des Landes, une aventure solidaire : suivez et soutenez Mara’Lanca pour Cœur de Gazelles.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/og-mara-lanca.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <style>
         :root {
             --sand: #D6A36A;
@@ -28,6 +38,8 @@
             --radius-lg: 22px;
             --gap: clamp(16px, 2vw, 28px);
             --container: min(1140px, 92vw);
+            /* Unique source de l'image hero (remplacez par votre photo locale) */
+            --hero: url('assets/hero-mara-lanca.jpg?v=1');
         }
 
         * {
@@ -92,6 +104,15 @@
             background: #fff;
         }
 
+        .btn-hello {
+            background: #00A86B;
+            color: #fff;
+        }
+
+        .btn-hello:hover {
+            background: #0b8a59;
+        }
+
         .chip {
             display: inline-block;
             padding: .35rem .7rem;
@@ -130,16 +151,10 @@
             text-decoration: none;
         }
 
-        .brand-mark {
-            width: 36px;
+        .brand-logo {
             height: 36px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--sand), #f0c28f);
-            display: grid;
-            place-items: center;
-            color: #523b1f;
-            font-weight: 800;
-            box-shadow: var(--shadow);
+            width: auto;
+            display: block;
         }
 
         nav ul {
@@ -161,6 +176,12 @@
 
         nav a:hover {
             background: rgba(0, 0, 0, .04);
+        }
+
+        .actions {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
         }
 
         /* Hero */
@@ -223,9 +244,37 @@
         .hero-media .ph {
             position: absolute;
             inset: 0;
-            background:
-                url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            background: var(--hero) center/cover no-repeat;
             filter: saturate(95%) contrast(95%);
+        }
+
+        .hero-badge {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .5rem .7rem;
+            background: rgba(255, 255, 255, .85);
+            border: 1px solid rgba(0, 0, 0, .06);
+            border-radius: 999px;
+            backdrop-filter: blur(6px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-badge img {
+            height: 22px;
+            width: auto;
+            display: block;
+        }
+
+        .hero-badge span {
+            font-weight: 700;
+            color: var(--night);
+            letter-spacing: .2px;
+            font-size: .95rem;
         }
 
         .stats {
@@ -298,11 +347,17 @@
         .card .img {
             height: 220px;
             background: linear-gradient(120deg, #e7e0d7, #f5efe9);
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            color: #81603a;
-            letter-spacing: .5px;
+            display: block;
+            overflow: hidden;
+            border: 0;
+            padding: 0;
+        }
+
+        .card .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .card .body {
@@ -378,18 +433,89 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 14px;
+            align-items: stretch;
+        }
+
+        @media (max-width: 980px) {
+            .logos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logos {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .logo {
             background: #fff;
-            height: 70px;
+            height: 90px;
             border-radius: 12px;
             box-shadow: var(--shadow);
             display: grid;
             place-items: center;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .logo img {
+            max-width: 80%;
+            max-height: 70%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: transform .2s ease, filter .2s ease;
+        }
+
+        .logo:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        .logo span {
             color: #9aa3ad;
             font-weight: 700;
             letter-spacing: .4px;
+        }
+
+        .fund {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px;
+            display: grid;
+            gap: .6rem;
+            margin-bottom: var(--gap);
+        }
+
+        .fund .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .fund .row strong {
+            color: var(--night);
+        }
+
+        .progress {
+            height: 14px;
+            background: #efe8dd;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress .bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--sand), #f0c28f);
+            transition: width 1s ease;
+        }
+
+        .fund small {
+            color: var(--mute);
         }
 
         .tiers {
@@ -435,6 +561,10 @@
         .post .cover {
             height: 180px;
             background: linear-gradient(130deg, #e9edf3, #f6f8fb);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            color: #7b8896;
         }
 
         .post .body {
@@ -522,6 +652,27 @@
             flex-wrap: wrap;
         }
 
+        /* Floating Donate */
+        .floating-donate {
+            position: fixed;
+            right: 16px;
+            bottom: 18px;
+            z-index: 60;
+            padding: .9rem 1.1rem;
+            border-radius: 999px;
+            background: #00A86B;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+            border: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .floating-donate:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+        }
+
         /* Animations */
         .reveal {
             opacity: 0;
@@ -588,7 +739,7 @@
     <header class="site">
         <div class="container nav">
             <a href="#" class="brand" aria-label="Accueil Mara’Lanca">
-                <div class="brand-mark">ML</div>
+                <img src="assets/Logo Mara'Lanca.png" alt="Mara’Lanca" class="brand-logo" />
                 <span>Mara’Lanca</span>
             </a>
             <nav>
@@ -596,11 +747,16 @@
                     <li><a href="#equipe">Équipe</a></li>
                     <li><a href="#rallye">Rallye</a></li>
                     <li><a href="#cause">Cause</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
                     <li><a href="#partenaires">Partenaires</a></li>
                     <li><a href="#journal">Journal</a></li>
                 </ul>
             </nav>
-            <a class="btn btn-primary" href="#contact">Devenir sponsor</a>
+            <div class="actions">
+                <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
+                    target="_blank" rel="noopener noreferrer">Faire un don</a>
+                <a class="btn btn-primary" href="#contact">Devenir sponsor</a>
+            </div>
         </div>
     </header>
 
@@ -617,6 +773,8 @@
                     <div class="cta">
                         <a class="btn btn-primary" href="#partenaires">Voir les contreparties sponsors</a>
                         <a class="btn btn-ghost" href="#journal">Suivre l’aventure</a>
+                        <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
+                            target="_blank" rel="noopener noreferrer">Faire un don</a>
                     </div>
                     <div class="stats" role="list">
                         <div class="stat" role="listitem">
@@ -633,8 +791,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-media reveal" aria-label="Photo désert marocain">
-                    <div class="ph" role="img" aria-label="4x4 dans les dunes du désert marocain"></div>
+                <div class="hero-media reveal" aria-label="Photo de l’équipe Mara’Lanca">
+                    <div class="ph" role="img" aria-label="L’équipe Mara’Lanca – les 4 participantes"></div>
+                    <div class="hero-badge"><img src="assets/Logo Mara'Lanca.png"
+                            alt="Mara’Lanca"><span>Mara’Lanca</span></div>
                 </div>
             </div>
         </section>
@@ -648,30 +808,38 @@
             </div>
             <div class="team">
                 <article class="card reveal">
-                    <div class="img">PORTRAIT</div>
+                    <a class="img" href="assets/Anaïs.jpg" target="_blank" rel="noopener">
+                        <img src="assets/Anaïs.jpg" alt="Pilote – Mara’Lanca">
+                    </a>
                     <div class="body">
-                        <h3>Prénom Nom</h3>
+                        <h3>Anaïs Lannelongue</h3>
                         <div class="role">Pilote – Logistique & Partenariats</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <div class="img">PORTRAIT</div>
+                    <a class="img" href="assets/Doriane.jpg" target="_blank" rel="noopener">
+                        <img src="assets/Doriane.jpg" alt="Co‑pilote – Mara’Lanca">
+                    </a>
                     <div class="body">
-                        <h3>Prénom Nom</h3>
+                        <h3>Doriane Cazaubon</h3>
                         <div class="role">Co‑pilote – Navigation & Sécurité</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <div class="img">PORTRAIT</div>
+                    <a class="img" href="assets/Estelle.jpg" target="_blank" rel="noopener">
+                        <img src="assets/Estelle.jpg" alt="Communication – Mara’Lanca">
+                    </a>
                     <div class="body">
-                        <h3>Prénom Nom</h3>
+                        <h3>Estelle Randriambao</h3>
                         <div class="role">Communication – Réseaux & Presse</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <div class="img">PORTRAIT</div>
+                    <a class="img" href="assets/Marion.jpg" target="_blank" rel="noopener">
+                        <img src="assets/Marion.jpg" alt="Partenariats – Mara’Lanca">
+                    </a>
                     <div class="body">
-                        <h3>Prénom Nom</h3>
+                        <h3>Marion Mallouki</h3>
                         <div class="role">Partenariats – Mécénat & Événementiel</div>
                     </div>
                 </article>
@@ -746,7 +914,9 @@
                     </ul>
                     <div class="cta" style="margin-top:1rem">
                         <a class="btn btn-primary" href="#contact">Nous aider à aider</a>
-                        <a class="btn" style="border-color:#e7e2da" href="#">En savoir plus</a>
+                        <a class="btn" style="border-color:#e7e2da"
+                            href="https://www.helloasso.com/associations/mara-oses/formulaires/4" target="_blank"
+                            rel="noopener noreferrer">Faire un don</a>
                     </div>
                 </div>
                 <div class="panel reveal">
@@ -778,13 +948,30 @@
                 <p>Des entreprises engagées qui partagent nos valeurs. Rejoignez l’aventure, votre marque au cœur des
                     dunes.</p>
             </div>
-            <div class="logos reveal" aria-label="Logos partenaires">
-                <div class="logo">LOGO</div>
-                <div class="logo">LOGO</div>
-                <div class="logo">LOGO</div>
-                <div class="logo">LOGO</div>
-                <div class="logo">LOGO</div>
-                <div class="logo">LOGO</div>
+            <div class="sec-meta"
+                style="display:flex; align-items:center; justify-content:space-between; gap:1rem; margin:-6px 0 14px;">
+                <span class="chip"><span id="sponsorCount">0</span> sponsors</span>
+                <a class="btn" style="border-color:#e7e2da" href="#contact">Devenir sponsor</a>
+            </div>
+
+            <!-- Progression de la campagne -->
+            <div class="fund reveal" id="fund" data-goal="64000" data-raised="6000">
+                <div class="row"><strong>Campagne 2027</strong><span id="pct">0%</span></div>
+                <div class="progress" aria-label="Progression de la campagne">
+                    <div class="bar" id="bar"></div>
+                </div>
+                <div class="row"><small><span id="raised">0 €</span> collectés</small><small>Objectif : <span
+                            id="goal">0 €</span></small></div>
+            </div>
+
+            <div class="logos reveal" aria-label="Logos partenaires" id="logos">
+                <!-- Remplacez par vos logos réels -->
+                <div class="logo"><span>LOGO</span></div>
+                <div class="logo"><span>LOGO</span></div>
+                <div class="logo"><span>LOGO</span></div>
+                <div class="logo"><span>LOGO</span></div>
+                <div class="logo"><span>LOGO</span></div>
+                <div class="logo"><span>LOGO</span></div>
             </div>
 
             <div class="tiers">
@@ -817,6 +1004,8 @@
             <div class="cta" style="margin-top:1rem">
                 <a class="btn btn-primary" href="#contact">Demander le kit sponsor</a>
                 <a class="btn" style="border-color:#e7e2da" href="#journal">Voir nos actualités</a>
+                <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
+                    target="_blank" rel="noopener noreferrer">Faire un don</a>
             </div>
         </section>
 
@@ -828,7 +1017,7 @@
             </div>
             <div class="news">
                 <article class="post reveal">
-                    <div class="cover"></div>
+                    <div class="cover">ÉVÉNEMENT</div>
                     <div class="body">
                         <h3>Entraînement navigation – boussole & carte</h3>
                         <p style="color:var(--mute)">Session au roadbook, apprentissage cap/azimut, gestion du terrain.
@@ -836,7 +1025,7 @@
                     </div>
                 </article>
                 <article class="post reveal">
-                    <div class="cover"></div>
+                    <div class="cover">SOLIDAIRE</div>
                     <div class="body">
                         <h3>Rencontre avec une asso locale</h3>
                         <p style="color:var(--mute)">On tisse les liens avec le territoire : actions communes et relais
@@ -844,7 +1033,7 @@
                     </div>
                 </article>
                 <article class="post reveal">
-                    <div class="cover"></div>
+                    <div class="cover">TECH</div>
                     <div class="body">
                         <h3>Choix du 4x4 : critères & fiabilité</h3>
                         <p style="color:var(--mute)">Autonomie, franchissement, maintenance : on partage nos critères et
@@ -854,74 +1043,115 @@
             </div>
         </section>
 
+        <!-- AGENDA -->
+        <section id="agenda" class="container">
+            <div class="sec-head">
+                <h2>Agenda – Où nous rencontrer</h2>
+                <p>Tous les événements où les Mara’Lanca participent : rencontres, lives, actions solidaires,
+                    entraînements ouverts. Mises à jour en continu.</p>
+            </div>
+
+            <div class="reveal" style="display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:12px">
+                <button class="btn" id="f_upcoming" style="border-color:#e7e2da">À venir</button>
+                <button class="btn" id="f_past" style="border-color:#e7e2da">Passés</button>
+                <button class="btn" id="f_all" style="border-color:#e7e2da">Tous</button>
+            </div>
+
+            <!-- Iframe Google Agenda (optionnel) -->
+            <div class="reveal"
+                style="background:#fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow:hidden; margin-bottom: var(--gap)">
+                <div
+                    style="aspect-ratio: 16/9; background:linear-gradient(130deg,#e9edf3,#f6f8fb); display:grid; place-items:center; color:#667085">
+                    <div style="padding:1rem; text-align:center">
+                        <strong>Intégrez votre Google Agenda public ici</strong><br>
+                        <small>Collez l’iframe : Google Agenda → Paramètres → Intégrer</small>
+                    </div>
+                </div>
+                <!-- Exemple :
+        <iframe style="width:100%; height:640px; border:0" src="https://calendar.google.com/calendar/embed?src=VOTRE_CAL_PUBLIC" loading="lazy"></iframe>
+        -->
+            </div>
+
+            <div id="agendaList" class="news"></div>
+        </section>
+
         <!-- CONTACT -->
         <section id="contact" class="container">
             <div class="sec-head">
-                <h2>Nous contacter / Soutenir</h2>
-                <p>Une idée, une envie de partenariat, une question média ? Écrivez‑nous : on répond vite.</p>
+                <h2>Contact WhatsApp</h2>
+                <p>Le plus simple et le plus rapide : écrivez‑nous directement sur WhatsApp (comme pour l’Élan
+                    Bigourdan). On répond vite.</p>
             </div>
             <div class="contact">
-                <form class="reveal"
-                    onsubmit="event.preventDefault(); alert('Merci ! Votre message a bien été envoyé.'); this.reset();">
+                <form class="reveal" id="waForm" onsubmit="event.preventDefault(); sendWhatsApp();">
                     <div class="grid">
                         <div>
                             <label for="nom">Nom / Société</label>
                             <input id="nom" name="nom" placeholder="Votre nom ou celui de votre entreprise" required>
                         </div>
                         <div>
-                            <label for="email">Email</label>
-                            <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+                            <label for="type">Je suis…</label>
+                            <select id="type" name="type">
+                                <option>Partenaire potentiel</option>
+                                <option>Donateur / Mécène</option>
+                                <option>Média / Presse</option>
+                                <option>Bénévole</option>
+                                <option>Autre</option>
+                            </select>
                         </div>
                     </div>
                     <div class="grid">
                         <div>
-                            <label for="type">Je suis…</label>
-                            <select id="type" name="type">
-                                <option>Partenaire potentiel</option>
-                                <option>Média / Presse</option>
-                                <option>Bénévole / Coup de pouce</option>
-                                <option>Autre</option>
+                            <label for="dest">Destinataire</label>
+                            <select id="dest" name="dest">
+                                <option value="team">Équipe Mara’Lanca (numéro principal)</option>
+                                <option value="com">Contact Communication</option>
+                                <option value="part">Contact Partenariats</option>
                             </select>
                         </div>
                         <div>
-                            <label for="tel">Téléphone (optionnel)</label>
+                            <label for="tel">Votre téléphone (optionnel)</label>
                             <input id="tel" name="tel" placeholder="06 12 34 56 78">
                         </div>
                     </div>
                     <div class="grid grid-1">
                         <div>
                             <label for="msg">Message</label>
-                            <textarea id="msg" name="message" placeholder="Dites‑nous en plus…"></textarea>
+                            <textarea id="msg" name="message"
+                                placeholder="Bonjour les Mara’Lanca, j’aimerais vous rencontrer lors de…"></textarea>
                         </div>
                     </div>
-                    <div style="display:flex; align-items:center; gap:.6rem; margin:.4rem 0 1rem;">
-                        <input id="kit" type="checkbox"> <label for="kit" style="margin:0; font-weight:500">Recevoir le
-                            kit média PDF</label>
+                    <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
+                        <button class="btn btn-primary" type="submit">Contacter sur WhatsApp</button>
+                        <a class="btn" style="border-color:#e7e2da" id="waDirect" href="#">Ouvrir WhatsApp
+                            maintenant</a>
                     </div>
-                    <button class="btn btn-primary" type="submit">Envoyer</button>
+                    <small style="display:block; margin-top:.6rem; color:var(--mute)">Astuce : personnalisez votre
+                        message ci‑dessus. Le clic ouvrira WhatsApp avec votre texte pré‑rempli.</small>
                 </form>
 
                 <aside class="aside reveal">
-                    <h3>Suivre l’aventure</h3>
-                    <p>On partage les coulisses sur nos réseaux : entraînements, rencontres, solidarité, et moments qui
-                        comptent.</p>
+                    <h3>Infos pratiques</h3>
+                    <ul class="list">
+                        <li>Réponse rapide sur WhatsApp</li>
+                        <li>Rencontres lors des événements de l’Agenda</li>
+                        <li>Kit média et dossier partenaire sur demande</li>
+                    </ul>
+                    <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
+                    <h3>Réseaux</h3>
                     <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
                         <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
                         <a class="btn btn-ghost" href="#" aria-label="TikTok">TikTok</a>
                         <a class="btn btn-ghost" href="#" aria-label="Facebook">Facebook</a>
                         <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
                     </div>
-                    <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
-                    <h3>Devenir partenaire</h3>
-                    <ul class="list">
-                        <li>Visibilité (site, réseaux, 4x4)</li>
-                        <li>Contenus exclusifs & RP locales</li>
-                        <li>Reporting de l’impact et des retombées</li>
-                    </ul>
                 </aside>
             </div>
         </section>
     </main>
+
+    <a class="floating-donate" href="https://www.helloasso.com/associations/mara-oses/formulaires/4" target="_blank"
+        rel="noopener noreferrer" aria-label="Faire un don HelloAsso">❤️ Faire un don</a>
 
     <footer>
         <div class="container foot">
@@ -949,6 +1179,150 @@
             if (y <= 8 && lastY > 8) siteHeader.style.boxShadow = 'none';
             lastY = y;
         });
+
+        // ===== WhatsApp contact =====
+        const WA_NUMBERS = {
+            team: '+33600000000',      // numéro principal équipe (à remplacer)
+            com: '+33600000001',      // contact communication (optionnel)
+            part: '+33600000002'       // contact partenariats (optionnel)
+        };
+
+        function buildWaUrl(number, text) {
+            const clean = (number || '').replace(/[^0-9+]/g, '');
+            const msg = encodeURIComponent(text || '');
+            // Utilise wa.me qui redirige vers app ou web automatiquement
+            return `https://wa.me/${clean.replace('+', '')}${msg ? `?text=${msg}` : ''}`;
+        }
+
+        function sendWhatsApp() {
+            const nom = document.getElementById('nom').value.trim();
+            const type = document.getElementById('type').value;
+            const tel = document.getElementById('tel').value.trim();
+            const msg = document.getElementById('msg').value.trim();
+            const dest = document.getElementById('dest').value;
+
+            const text = [
+                `Bonjour, ici ${nom} (${type}).`,
+                msg ? `
+
+${msg}` : '',
+                tel ? `
+
+Mon téléphone : ${tel}` : '',
+                `
+
+— Message envoyé depuis le site Mara’Lanca`
+            ].join('');
+
+            const wa = buildWaUrl(WA_NUMBERS[dest] || WA_NUMBERS.team, text);
+            window.open(wa, '_blank');
+        }
+
+        // Direct link updates when typing
+        const waForm = document.getElementById('waForm');
+        const waDirect = document.getElementById('waDirect');
+        if (waForm && waDirect) {
+            waForm.addEventListener('input', () => {
+                const nom = document.getElementById('nom').value.trim() || 'Partenaire intéressé';
+                const type = document.getElementById('type').value;
+                const tel = document.getElementById('tel').value.trim();
+                const msg = document.getElementById('msg').value.trim();
+                const dest = document.getElementById('dest').value;
+                const text = [`Bonjour, ici ${nom} (${type}).`, msg ? `
+
+${msg}` : '', tel ? `
+
+Mon téléphone : ${tel}` : '', `
+
+— Message envoyé depuis le site Mara’Lanca`].join('');
+                waDirect.href = buildWaUrl(WA_NUMBERS[dest] || WA_NUMBERS.team, text);
+            });
+        }
+
+        // ===== Fundraising progress =====
+        function euro(n) {
+            try { return n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); }
+            catch (e) { return n + ' €'; }
+        }
+        (function () {
+            const fund = document.getElementById('fund');
+            if (!fund) return;
+            const goal = parseFloat(fund.dataset.goal) || 0;
+            const raised = parseFloat(fund.dataset.raised) || 0;
+            const pct = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : 0;
+            const goalEl = document.getElementById('goal');
+            const raisedEl = document.getElementById('raised');
+            const pctEl = document.getElementById('pct');
+            const barEl = document.getElementById('bar');
+            if (goalEl) goalEl.textContent = euro(goal);
+            if (raisedEl) raisedEl.textContent = euro(raised);
+            if (pctEl) pctEl.textContent = pct + '%';
+            requestAnimationFrame(() => { if (barEl) barEl.style.width = pct + '%'; });
+        })();
+
+        // ===== Sponsors count =====
+        (function () {
+            const container = document.getElementById('logos');
+            const out = document.getElementById('sponsorCount');
+            if (!container || !out) return;
+            const count = Array.from(container.querySelectorAll('.logo')).filter(el => el.querySelector('img') || (el.textContent || '').trim() !== '').length;
+            out.textContent = count;
+        })();
+
+        // ===== Agenda dynamique =====
+        const EVENTS = [
+            { title: 'Café-rencontre partenaires – Dax', type: 'ÉVÉNEMENT', start: '2025-10-23T18:30', end: '2025-10-23T20:00', city: 'Dax', venue: 'Maison des Associations', cta: 'Je m’inscris (WhatsApp)', ctaType: 'wa' },
+            { title: 'Live Instagram – Prépa navigation', type: 'LIVE', start: '2025-10-28T20:00', end: '2025-10-28T21:00', city: 'Instagram', venue: '@mara.lanca', cta: 'Recevoir le rappel', ctaType: 'wa' },
+            { title: 'Stand Cœur de Gazelles – Marché local', type: 'SOLIDAIRE', start: '2025-11-09T10:00', end: '2025-11-09T16:00', city: 'Hossegor', venue: 'Marché central', cta: 'Je passe vous voir', ctaType: 'wa' }
+        ];
+
+        function fmtDateRange(startStr, endStr) {
+            const optsDay = { weekday: 'long', day: '2-digit', month: 'long' };
+            const optsTime = { hour: '2-digit', minute: '2-digit' };
+            const s = new Date(startStr);
+            const e = endStr ? new Date(endStr) : null;
+            const d = s.toLocaleDateString('fr-FR', optsDay);
+            const t1 = s.toLocaleTimeString('fr-FR', optsTime);
+            const t2 = e ? e.toLocaleTimeString('fr-FR', optsTime) : null;
+            return e ? `${d} – ${t1} · ${t2}` : `${d} – ${t1}`;
+        }
+
+        function cardFor(ev) {
+            const coverLabel = ev.type || 'EVENT';
+            const when = fmtDateRange(ev.start, ev.end);
+            const where = [ev.city, ev.venue].filter(Boolean).join(' • ');
+            const btn = ev.cta || 'Je viens';
+            return `
+        <article class="post reveal">
+          <div class="cover">${coverLabel}</div>
+          <div class="body">
+            <h3>${ev.title}</h3>
+            <p style="color:var(--mute)">${when}${where ? ' • ' + where : ''}</p>
+            <div class="cta">${ev.ctaType === 'wa' ? '<a class="btn btn-primary" href="#contact">' + btn + '</a>' : ''}</div>
+          </div>
+        </article>`;
+        }
+
+        function renderAgenda(filter = 'upcoming') {
+            const list = document.getElementById('agendaList');
+            if (!list) return;
+            const now = new Date();
+            let data = [...EVENTS].sort((a, b) => new Date(a.start) - new Date(b.start));
+            if (filter === 'upcoming') data = data.filter(ev => new Date(ev.end || ev.start) >= now);
+            if (filter === 'past') data = data.filter(ev => new Date(ev.end || ev.start) < now);
+            list.innerHTML = data.map(cardFor).join('') || '<p style="color:var(--mute)">Aucun événement pour le moment. Revenez vite 👀</p>';
+            list.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        }
+
+        (function () {
+            renderAgenda('upcoming');
+            const up = document.getElementById('f_upcoming');
+            const pa = document.getElementById('f_past');
+            const all = document.getElementById('f_all');
+            up && up.addEventListener('click', () => renderAgenda('upcoming'));
+            pa && pa.addEventListener('click', () => renderAgenda('past'));
+            all && all.addEventListener('click', () => renderAgenda('all'));
+        })();
     </script>
 </body>
 
