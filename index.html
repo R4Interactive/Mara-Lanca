@@ -25,6 +25,20 @@
     <meta property="og:image" content="/assets/og-mara-lanca.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- SEO: presse Sud Ouest -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Labouheyre : les Mara’Lanca en route pour le Rallye Aïcha des Gazelles",
+    "datePublished": "2025-06-25T19:14:00+02:00",
+    "author": { "@type": "Person", "name": "Maritchü Sabas" },
+    "publisher": { "@type": "Organization", "name": "Sud Ouest" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.sudouest.fr/landes/labouheyre/labouheyre-les-mara-lanca-en-route-pour-le-rallye-aicha-des-gazelles-24836923.php" },
+    "about": ["Mara’Lanca", "Rallye Aïcha des Gazelles", "Cœur de Gazelles", "Labouheyre"]
+  }
+  </script>
+
     <style>
         :root {
             --sand: #D6A36A;
@@ -38,17 +52,16 @@
             --radius-lg: 22px;
             --gap: clamp(16px, 2vw, 28px);
             --container: min(1140px, 92vw);
-            /* Unique source de l'image hero (remplacez par votre photo locale) */
-            --hero: url('assets/hero-mara-lanca.jpg?v=1');
+            --hero: url('assets/hero-mara-lanca.jpg?v=13');
         }
 
         * {
-            box-sizing: border-box;
+            box-sizing: border-box
         }
 
         html,
         body {
-            height: 100%;
+            height: 100%
         }
 
         body {
@@ -58,13 +71,13 @@
             background: var(--cream);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            -moz-osx-font-smoothing: grayscale
         }
 
         /* Utility */
         .container {
             width: var(--container);
-            margin: 0 auto;
+            margin: 0 auto
         }
 
         .btn {
@@ -77,40 +90,40 @@
             font-weight: 600;
             text-decoration: none;
             transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-            cursor: pointer;
+            cursor: pointer
         }
 
         .btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08)
         }
 
         .btn-primary {
             background: var(--night);
-            color: var(--white);
+            color: var(--white)
         }
 
         .btn-primary:hover {
-            background: #13253f;
+            background: #13253f
         }
 
         .btn-ghost {
             background: rgba(255, 255, 255, .85);
             color: var(--night);
-            border-color: rgba(0, 0, 0, .06);
+            border-color: rgba(0, 0, 0, .06)
         }
 
         .btn-ghost:hover {
-            background: #fff;
+            background: #fff
         }
 
         .btn-hello {
             background: #00A86B;
-            color: #fff;
+            color: #fff
         }
 
         .btn-hello:hover {
-            background: #0b8a59;
+            background: #0b8a59
         }
 
         .chip {
@@ -121,7 +134,7 @@
             background: #f1ece6;
             color: #7a5d3a;
             font-weight: 600;
-            letter-spacing: .2px;
+            letter-spacing: .2px
         }
 
         /* Header */
@@ -131,14 +144,14 @@
             z-index: 50;
             backdrop-filter: saturate(180%) blur(8px);
             background: rgba(250, 247, 243, .7);
-            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            border-bottom: 1px solid rgba(0, 0, 0, .05)
         }
 
         .nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: .8rem 0;
+            padding: .8rem 0
         }
 
         .brand {
@@ -148,13 +161,13 @@
             font-weight: 800;
             letter-spacing: .2px;
             color: var(--night);
-            text-decoration: none;
+            text-decoration: none
         }
 
         .brand-logo {
             height: 36px;
             width: auto;
-            display: block;
+            display: block
         }
 
         nav ul {
@@ -162,7 +175,7 @@
             gap: 1rem;
             list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
         nav a {
@@ -171,23 +184,23 @@
             font-weight: 600;
             opacity: .9;
             padding: .5rem .75rem;
-            border-radius: 10px;
+            border-radius: 10px
         }
 
         nav a:hover {
-            background: rgba(0, 0, 0, .04);
+            background: rgba(0, 0, 0, .04)
         }
 
         .actions {
             display: flex;
             gap: .5rem;
-            align-items: center;
+            align-items: center
         }
 
         /* Hero */
         .hero {
             position: relative;
-            isolation: isolate;
+            isolation: isolate
         }
 
         .hero .wrap {
@@ -195,34 +208,34 @@
             grid-template-columns: 1.2fr .8fr;
             gap: var(--gap);
             padding: clamp(48px, 8vw, 96px) 0;
-            align-items: center;
+            align-items: center
         }
 
         .hero-card {
             background: #fff;
             padding: clamp(24px, 3vw, 36px);
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         .hero h1 {
             font-size: clamp(2rem, 4.2vw, 3.4rem);
             line-height: 1.1;
             margin: 0 0 .75rem;
-            color: var(--night);
+            color: var(--night)
         }
 
         .hero p.lead {
             font-size: clamp(1rem, 1.4vw, 1.2rem);
             color: var(--mute);
-            margin: 0 0 1.25rem;
+            margin: 0 0 1.25rem
         }
 
         .hero .cta {
             display: flex;
             flex-wrap: wrap;
             gap: .7rem;
-            margin-top: .75rem;
+            margin-top: .75rem
         }
 
         .hero-media {
@@ -230,7 +243,7 @@
             height: 420px;
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         .hero-media::before {
@@ -238,14 +251,14 @@
             position: absolute;
             inset: 0;
             background: radial-gradient(80% 80% at 70% 20%, rgba(214, 163, 106, .15), transparent 60%), linear-gradient(180deg, rgba(29, 53, 87, .25), rgba(29, 53, 87, .05));
-            z-index: 2;
+            z-index: 2
         }
 
         .hero-media .ph {
             position: absolute;
             inset: 0;
-            background: var(--hero) center/cover no-repeat;
-            filter: saturate(95%) contrast(95%);
+            background: var(--hero) center/cover no-repeat !important;
+            filter: saturate(95%) contrast(95%)
         }
 
         .hero-badge {
@@ -261,27 +274,50 @@
             border: 1px solid rgba(0, 0, 0, .06);
             border-radius: 999px;
             backdrop-filter: blur(6px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         .hero-badge img {
             height: 22px;
             width: auto;
-            display: block;
+            display: block
         }
 
         .hero-badge span {
             font-weight: 700;
             color: var(--night);
             letter-spacing: .2px;
-            font-size: .95rem;
+            font-size: .95rem
+        }
+
+        .press-strip {
+            margin-top: .75rem
+        }
+
+        .press-strip a {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .45rem .75rem;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, .08);
+            font-weight: 600;
+            text-decoration: none;
+            color: #1d3557;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
+            cursor: pointer
+        }
+
+        .press-strip a:hover {
+            background: #fafafa
         }
 
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--gap);
-            margin-top: 1rem;
+            margin-top: 1rem
         }
 
         .stat {
@@ -289,23 +325,23 @@
             padding: 18px 20px;
             border-radius: 14px;
             box-shadow: var(--shadow);
-            text-align: center;
+            text-align: center
         }
 
         .stat h3 {
             margin: .2rem 0 0;
             font-size: 1.15rem;
-            color: var(--night);
+            color: var(--night)
         }
 
         .stat .n {
             font-size: 1.6rem;
-            font-weight: 800;
+            font-weight: 800
         }
 
         /* Sections */
         section {
-            padding: clamp(42px, 7vw, 92px) 0;
+            padding: clamp(42px, 7vw, 92px) 0
         }
 
         .sec-head {
@@ -313,26 +349,26 @@
             align-items: end;
             justify-content: space-between;
             gap: 1rem;
-            margin-bottom: clamp(20px, 4vw, 34px);
+            margin-bottom: clamp(20px, 4vw, 34px)
         }
 
         .sec-head h2 {
             margin: 0;
             font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-            color: var(--night);
+            color: var(--night)
         }
 
         .sec-head p {
             margin: 0;
             color: var(--mute);
-            max-width: 60ch;
+            max-width: 60ch
         }
 
         /* Team */
         .team {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--gap);
+            gap: var(--gap)
         }
 
         .card {
@@ -341,33 +377,33 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             display: flex;
-            flex-direction: column;
+            flex-direction: column
         }
 
         .card .img {
             height: 220px;
-            background: linear-gradient(120deg, #e7e0d7, #f5efe9);
             display: block;
             overflow: hidden;
             border: 0;
             padding: 0;
+            background: #f1ece6
         }
 
         .card .img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            display: block
         }
 
         .card .body {
-            padding: 18px;
+            padding: 18px
         }
 
         .role {
             font-size: .9rem;
             color: var(--mute);
-            margin-top: 4px;
+            margin-top: 4px
         }
 
         /* Rallye */
@@ -375,14 +411,14 @@
             display: grid;
             grid-template-columns: 1.1fr .9fr;
             gap: var(--gap);
-            align-items: center;
+            align-items: center
         }
 
         .timeline {
             background: #fff;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 20px;
+            padding: 20px
         }
 
         .step {
@@ -392,7 +428,7 @@
             align-items: start;
             padding: 12px 6px;
             border-left: 3px solid #efeadf;
-            margin-left: 10px;
+            margin-left: 10px
         }
 
         .step .dot {
@@ -406,11 +442,11 @@
             font-weight: 800;
             font-size: .8rem;
             translate: -13px 0;
-            box-shadow: 0 4px 10px rgba(214, 163, 106, .35);
+            box-shadow: 0 4px 10px rgba(214, 163, 106, .35)
         }
 
         .step h4 {
-            margin: .2rem 0 .25rem;
+            margin: .2rem 0 .25rem
         }
 
         /* Cause */
@@ -418,14 +454,14 @@
             display: grid;
             grid-template-columns: .9fr 1.1fr;
             gap: var(--gap);
-            align-items: center;
+            align-items: center
         }
 
         .cause .panel {
             background: #fff;
             padding: 22px;
             border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         /* Partners */
@@ -433,18 +469,18 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 14px;
-            align-items: stretch;
+            align-items: stretch
         }
 
-        @media (max-width: 980px) {
+        @media (max-width:980px) {
             .logos {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr)
             }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width:640px) {
             .logos {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr)
             }
         }
 
@@ -457,7 +493,7 @@
             place-items: center;
             padding: 10px;
             overflow: hidden;
-            position: relative;
+            position: relative
         }
 
         .logo img {
@@ -465,18 +501,18 @@
             max-height: 70%;
             object-fit: contain;
             filter: grayscale(100%);
-            transition: transform .2s ease, filter .2s ease;
+            transition: transform .2s ease, filter .2s ease
         }
 
         .logo:hover img {
             filter: grayscale(0%);
-            transform: scale(1.03);
+            transform: scale(1.03)
         }
 
         .logo span {
             color: #9aa3ad;
             font-weight: 700;
-            letter-spacing: .4px;
+            letter-spacing: .4px
         }
 
         .fund {
@@ -486,67 +522,43 @@
             padding: 18px;
             display: grid;
             gap: .6rem;
-            margin-bottom: var(--gap);
+            margin-bottom: var(--gap)
         }
 
         .fund .row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 1rem;
+            gap: 1rem
         }
 
         .fund .row strong {
-            color: var(--night);
+            color: var(--night)
         }
 
         .progress {
             height: 14px;
             background: #efe8dd;
             border-radius: 999px;
-            overflow: hidden;
+            overflow: hidden
         }
 
         .progress .bar {
             height: 100%;
             width: 0%;
             background: linear-gradient(90deg, var(--sand), #f0c28f);
-            transition: width 1s ease;
+            transition: width 1s ease
         }
 
         .fund small {
-            color: var(--mute);
-        }
-
-        .tiers {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--gap);
-            margin-top: var(--gap);
-        }
-
-        .tier {
-            background: #fff;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 22px;
-        }
-
-        .tier h4 {
-            margin: .2rem 0 .6rem;
-        }
-
-        .tier ul {
-            margin: 0;
-            padding-left: 1.1rem;
-            color: var(--mute);
+            color: var(--mute)
         }
 
         /* News */
         .news {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--gap);
+            gap: var(--gap)
         }
 
         .post {
@@ -555,7 +567,7 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             display: flex;
-            flex-direction: column;
+            flex-direction: column
         }
 
         .post .cover {
@@ -564,35 +576,294 @@
             display: grid;
             place-items: center;
             font-weight: 700;
-            color: #7b8896;
+            color: #7b8896
         }
 
         .post .body {
-            padding: 18px;
+            padding: 18px
         }
+
+        /* Gallery – Carousel */
+        .gal-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius)
+        }
+
+        .gal-track {
+            display: flex;
+            gap: var(--gap);
+            will-change: transform
+        }
+
+        .slide {
+            flex: 0 0 clamp(260px, 28vw, 360px);
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #fff;
+            cursor: pointer
+        }
+
+        .slide img {
+            width: 100%;
+            height: clamp(180px, 24vw, 240px);
+            object-fit: cover;
+            display: block;
+            transition: transform .3s ease
+        }
+
+        .slide:hover img {
+            transform: scale(1.03)
+        }
+
+        .slide .gal-cap {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            background: rgba(0, 0, 0, .55);
+            color: #fff;
+            padding: .35rem .6rem;
+            border-radius: 10px;
+            font-size: .85rem
+        }
+
+        .gal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            padding: .5rem .7rem;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+            z-index: 2
+        }
+
+        .gal-prev {
+            left: 6px
+        }
+
+        .gal-next {
+            right: 6px
+        }
+
+        .gal-nav:hover {
+            background: rgba(255, 255, 255, .2)
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 80
+        }
+
+        .lightbox.on {
+            display: flex
+        }
+
+        .lightbox img {
+            max-width: min(92vw, 1200px);
+            max-height: 86vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .5)
+        }
+
+        .lb-close,
+        .lb-prev,
+        .lb-next {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            padding: .6rem .8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            backdrop-filter: blur(6px)
+        }
+
+        .lb-close {
+            top: 8%;
+            right: 3%;
+            transform: none
+        }
+
+        .lb-prev {
+            left: 3%
+        }
+
+        .lb-next {
+            right: 3%
+        }
+
+        .lb-close:hover,
+        .lb-prev:hover,
+        .lb-next:hover {
+            background: rgba(255, 255, 255, .2)
+        }
+
+        /* Agenda – listing multi-cartes */
+        .ag-header {
+            display: flex;
+            gap: .75rem;
+            align-items: center;
+            margin-bottom: 12px
+        }
+
+        .ag-search {
+            width: 100%;
+            padding: .8rem 1rem;
+            border: 1px solid #e7e2da;
+            border-radius: 12px;
+            background: #fff
+        }
+
+        .ag-filters {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+            margin: 10px 0 16px
+        }
+
+        .ag-filters .btn {
+            border-color: #e7e2da
+        }
+
+        .ag-filters .btn.is-active {
+            background: #fff;
+            border-color: #e0d8cc
+        }
+
+        .ag-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap)
+        }
+
+        @media (max-width:980px) {
+            .ag-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width:640px) {
+            .ag-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .ag-card {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column
+        }
+
+        .ag-cover {
+            height: 200px;
+            position: relative;
+            background: #f2f4f7
+        }
+
+        .ag-cover img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .ag-badge {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: #1d3557;
+            color: #fff;
+            font-weight: 700;
+            padding: .25rem .55rem;
+            border-radius: 999px;
+            font-size: .78rem
+        }
+
+        .ag-type {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #eef2f7;
+            color: #334155;
+            font-weight: 700;
+            padding: .25rem .55rem;
+            border-radius: 999px;
+            font-size: .78rem
+        }
+
+        .ag-body {
+            padding: 18px;
+            display: grid;
+            gap: .5rem
+        }
+
+        .ag-title {
+            margin: .1rem 0;
+            color: var(--night)
+        }
+
+        .ag-meta {
+            color: var(--mute)
+        }
+
+        .ag-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: .6rem
+        }
+
+        .ag-cta .btn {
+            justify-content: center;
+            padding: .6rem 1rem;
+            font-size: .9rem
+        }
+
+        /* texte centré + bouton réduit */
 
         /* Contact */
         .contact {
             display: grid;
             grid-template-columns: 1.1fr .9fr;
-            gap: var(--gap);
+            gap: var(--gap)
         }
 
         form {
             background: #fff;
             padding: 22px;
             border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: .9rem;
+            gap: .9rem
         }
 
         .grid-1 {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr
         }
 
         label {
@@ -600,7 +871,7 @@
             font-weight: 600;
             color: var(--night);
             display: block;
-            margin-bottom: .25rem;
+            margin-bottom: .25rem
         }
 
         input,
@@ -612,12 +883,12 @@
             border: 1px solid #e7e2da;
             background: #fff;
             font-family: inherit;
-            font-size: 1rem;
+            font-size: 1rem
         }
 
         textarea {
             min-height: 130px;
-            resize: vertical;
+            resize: vertical
         }
 
         .aside {
@@ -625,23 +896,23 @@
             color: #e8eef8;
             border-radius: var(--radius);
             padding: 24px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
 
         .aside h3 {
             color: #fff;
-            margin-top: 0;
+            margin-top: 0
         }
 
         .list {
             margin: 0;
-            padding-left: 1.15rem;
+            padding-left: 1.15rem
         }
 
         /* Footer */
         footer {
             padding: 36px 0 48px;
-            color: #6b7686;
+            color: #6b7686
         }
 
         .foot {
@@ -649,7 +920,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
 
         /* Floating Donate */
@@ -665,71 +936,72 @@
             text-decoration: none;
             font-weight: 700;
             box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
-            border: 1px solid rgba(0, 0, 0, .06);
+            border: 1px solid rgba(0, 0, 0, .06)
         }
 
         .floating-donate:hover {
             transform: translateY(-1px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .22)
         }
 
         /* Animations */
         .reveal {
             opacity: 0;
             transform: translateY(16px);
-            transition: opacity .6s ease, transform .6s ease;
+            transition: opacity .6s ease, transform .6s ease
         }
 
         .reveal.on {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0)
         }
 
         /* Responsive */
-        @media (max-width: 980px) {
+        @media (max-width:980px) {
             .hero .wrap {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
 
             .rally,
             .cause,
             .contact {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
 
             .team {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr)
             }
 
             .news {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr)
             }
 
             .logos {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr)
             }
 
-            .tiers {
-                grid-template-columns: 1fr;
+            .ag-grid {
+                grid-template-columns: repeat(2, 1fr)
             }
 
             .hero-media {
-                height: 320px;
+                height: 320px
             }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width:640px) {
             nav ul {
-                display: none;
+                display: none
             }
 
             .team,
-            .news {
-                grid-template-columns: 1fr;
+            .news,
+            .ag-grid {
+                grid-template-columns: 1fr
             }
 
             .stats {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
         }
     </style>
@@ -755,7 +1027,7 @@
             <div class="actions">
                 <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
                     target="_blank" rel="noopener noreferrer">Faire un don</a>
-                <a class="btn btn-primary" href="#contact">Devenir sponsor</a>
+                <a class="btn btn-primary" href="#contact">Devenir partenaire</a>
             </div>
         </div>
     </header>
@@ -771,10 +1043,17 @@
                         désert en 4x4 pour soutenir <strong>Cœur de Gazelles</strong>. Suivez l’aventure, vibrez avec
                         nous et aidez-nous à faire rayonner nos Landes. 🌍</p>
                     <div class="cta">
-                        <a class="btn btn-primary" href="#partenaires">Voir les contreparties sponsors</a>
+                        <a class="btn btn-primary" href="#contact">Devenir partenaire</a>
                         <a class="btn btn-ghost" href="#journal">Suivre l’aventure</a>
                         <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
                             target="_blank" rel="noopener noreferrer">Faire un don</a>
+                    </div>
+                    <div class="press-strip">
+                        <a href="https://www.sudouest.fr/landes/labouheyre/labouheyre-les-mara-lanca-en-route-pour-le-rallye-aicha-des-gazelles-24836923.php"
+                            target="_blank" rel="noopener noreferrer"
+                            aria-label="Lire l’article Sud Ouest sur les Mara’Lanca">
+                            Vu dans <strong>Sud Ouest</strong> 📰
+                        </a>
                     </div>
                     <div class="stats" role="list">
                         <div class="stat" role="listitem">
@@ -808,36 +1087,32 @@
             </div>
             <div class="team">
                 <article class="card reveal">
-                    <a class="img" href="assets/Anaïs.jpg" target="_blank" rel="noopener">
-                        <img src="assets/Anaïs.jpg" alt="Pilote – Mara’Lanca">
-                    </a>
+                    <a class="img" href="assets/Anaïs.jpg" target="_blank" rel="noopener"><img src="assets/Anaïs.jpg"
+                            alt="Pilote – Mara’Lanca"></a>
                     <div class="body">
                         <h3>Anaïs Lannelongue</h3>
                         <div class="role">Pilote – Logistique & Partenariats</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <a class="img" href="assets/Doriane.jpg" target="_blank" rel="noopener">
-                        <img src="assets/Doriane.jpg" alt="Co‑pilote – Mara’Lanca">
-                    </a>
+                    <a class="img" href="assets/Doriane.jpg" target="_blank" rel="noopener"><img
+                            src="assets/Doriane.jpg" alt="Co-pilote – Mara’Lanca"></a>
                     <div class="body">
                         <h3>Doriane Cazaubon</h3>
-                        <div class="role">Co‑pilote – Navigation & Sécurité</div>
+                        <div class="role">Co-pilote – Navigation & Sécurité</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <a class="img" href="assets/Estelle.jpg" target="_blank" rel="noopener">
-                        <img src="assets/Estelle.jpg" alt="Communication – Mara’Lanca">
-                    </a>
+                    <a class="img" href="assets/Estelle.jpg" target="_blank" rel="noopener"><img
+                            src="assets/Estelle.jpg" alt="Communication – Mara’Lanca"></a>
                     <div class="body">
                         <h3>Estelle Randriambao</h3>
                         <div class="role">Communication – Réseaux & Presse</div>
                     </div>
                 </article>
                 <article class="card reveal">
-                    <a class="img" href="assets/Marion.jpg" target="_blank" rel="noopener">
-                        <img src="assets/Marion.jpg" alt="Partenariats – Mara’Lanca">
-                    </a>
+                    <a class="img" href="assets/Marion.jpg" target="_blank" rel="noopener"><img src="assets/Marion.jpg"
+                            alt="Partenariats – Mara’Lanca"></a>
                     <div class="body">
                         <h3>Marion Mallouki</h3>
                         <div class="role">Partenariats – Mécénat & Événementiel</div>
@@ -850,7 +1125,7 @@
         <section id="rallye" class="container">
             <div class="sec-head">
                 <h2>Rallye Aïcha des Gazelles</h2>
-                <p>Le seul rallye‑raid 100% féminin, sans GPS, au cœur du Maroc. Orientation, entraide, sobriété carbone
+                <p>Le seul rallye-raid 100% féminin, sans GPS, au cœur du Maroc. Orientation, entraide, sobriété carbone
                     et impact social.</p>
             </div>
             <div class="rally">
@@ -882,13 +1157,13 @@
                 </div>
                 <div class="reveal">
                     <div class="chip" style="margin-bottom:.6rem">Impact & valeurs</div>
-                    <h3 style="margin:0 0 .5rem; color:var(--night)">Au‑delà de la course : une mission</h3>
+                    <h3 style="margin:0 0 .5rem; color:var(--night)">Au-delà de la course : une mission</h3>
                     <p style="color:var(--mute)">Chaque kilomètre compte. Nous soutenons <strong>Cœur de
                             Gazelles</strong> : actions médicales, solidarité et aide aux populations locales. Notre
                         aventure donne de la voix à celles et ceux qui en ont le plus besoin.</p>
                     <div class="cta" style="margin-top:1rem">
                         <a class="btn btn-primary" href="#cause">Découvrir la cause</a>
-                        <a class="btn" style="border-color:#e7e2da" href="#partenaires">Devenir partenaire</a>
+                        <a class="btn" style="border-color:#e7e2da" href="#contact">Devenir partenaire</a>
                     </div>
                 </div>
             </div>
@@ -951,11 +1226,11 @@
             <div class="sec-meta"
                 style="display:flex; align-items:center; justify-content:space-between; gap:1rem; margin:-6px 0 14px;">
                 <span class="chip"><span id="sponsorCount">0</span> sponsors</span>
-                <a class="btn" style="border-color:#e7e2da" href="#contact">Devenir sponsor</a>
+                <a class="btn" style="border-color:#e7e2da" href="#contact">Devenir partenaire</a>
             </div>
 
             <!-- Progression de la campagne -->
-            <div class="fund reveal" id="fund" data-goal="64000" data-raised="6000">
+            <div class="fund reveal" id="fund" data-goal="64000" data-raised="6490">
                 <div class="row"><strong>Campagne 2027</strong><span id="pct">0%</span></div>
                 <div class="progress" aria-label="Progression de la campagne">
                     <div class="bar" id="bar"></div>
@@ -965,44 +1240,15 @@
             </div>
 
             <div class="logos reveal" aria-label="Logos partenaires" id="logos">
-                <!-- Remplacez par vos logos réels -->
                 <div class="logo"><span>LOGO</span></div>
                 <div class="logo"><span>LOGO</span></div>
                 <div class="logo"><span>LOGO</span></div>
                 <div class="logo"><span>LOGO</span></div>
                 <div class="logo"><span>LOGO</span></div>
                 <div class="logo"><span>LOGO</span></div>
-            </div>
-
-            <div class="tiers">
-                <div class="tier reveal">
-                    <h4>Pack Bronze</h4>
-                    <ul>
-                        <li>Logo site + remerciements réseaux</li>
-                        <li>Sticker 4x4 (format M)</li>
-                        <li>Invitation à un live privé</li>
-                    </ul>
-                </div>
-                <div class="tier reveal">
-                    <h4>Pack Argent</h4>
-                    <ul>
-                        <li>Visibilité renforcée (site + stories dédiées)</li>
-                        <li>Sticker 4x4 (format L) + photos brandées</li>
-                        <li>Accès coulisses (newsletter partenaire)</li>
-                    </ul>
-                </div>
-                <div class="tier reveal">
-                    <h4>Pack Or</h4>
-                    <ul>
-                        <li>Logo premium (4x4 + tenue + site)</li>
-                        <li>Vidéo dédiée + interview</li>
-                        <li>Présence événements & RP locales</li>
-                    </ul>
-                </div>
             </div>
 
             <div class="cta" style="margin-top:1rem">
-                <a class="btn btn-primary" href="#contact">Demander le kit sponsor</a>
                 <a class="btn" style="border-color:#e7e2da" href="#journal">Voir nos actualités</a>
                 <a class="btn btn-hello" href="https://www.helloasso.com/associations/mara-oses/formulaires/4"
                     target="_blank" rel="noopener noreferrer">Faire un don</a>
@@ -1043,112 +1289,157 @@
             </div>
         </section>
 
+        <!-- GALLERY (Carrousel + Lightbox) -->
+        <section id="galerie" class="container">
+            <div class="sec-head">
+                <h2>Galerie – Nos meilleurs moments</h2>
+                <p>Quelques instantanés de la préparation, des rencontres et des défis qui nous portent.</p>
+            </div>
+
+            <div class="gal-carousel" id="galCarousel" aria-label="Galerie en carrousel auto-défilant">
+                <button class="gal-nav gal-prev" aria-label="Précédent">‹</button>
+                <button class="gal-nav gal-next" aria-label="Suivant">›</button>
+
+                <div class="gal-track" id="galTrack">
+                    <figure class="slide" data-gallery-item data-cap="Entraînement dunes"
+                        data-src="assets/gallery/dunes.jpg">
+                        <img src="assets/gallery/dunes.jpg" alt="Entraînement dans les dunes">
+                        <figcaption class="gal-cap">Entraînement dunes</figcaption>
+                    </figure>
+                    <figure class="slide" data-gallery-item data-cap="Atelier navigation"
+                        data-src="assets/gallery/navigation.jpg">
+                        <img src="assets/gallery/navigation.jpg" alt="Atelier navigation">
+                        <figcaption class="gal-cap">Atelier navigation</figcaption>
+                    </figure>
+                    <figure class="slide" data-gallery-item data-cap="Rencontre associative"
+                        data-src="assets/gallery/asso.jpg">
+                        <img src="assets/gallery/asso.jpg" alt="Rencontre associative">
+                        <figcaption class="gal-cap">Rencontre associative</figcaption>
+                    </figure>
+                    <figure class="slide" data-gallery-item data-cap="Bivouac test"
+                        data-src="assets/gallery/bivouac.jpg">
+                        <img src="assets/gallery/bivouac.jpg" alt="Bivouac test">
+                        <figcaption class="gal-cap">Bivouac test</figcaption>
+                    </figure>
+                    <figure class="slide" data-gallery-item data-cap="Mécanique & 4x4"
+                        data-src="assets/gallery/meca.jpg">
+                        <img src="assets/gallery/meca.jpg" alt="Mécanique et 4x4">
+                        <figcaption class="gal-cap">Mécanique & 4x4</figcaption>
+                    </figure>
+                    <figure class="slide" data-gallery-item data-cap="Solidarité locale"
+                        data-src="assets/gallery/solidarite.jpg">
+                        <img src="assets/gallery/solidarite.jpg" alt="Solidarité locale">
+                        <figcaption class="gal-cap">Solidarité locale</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lb">
+                <button class="lb-close" id="lbClose" aria-label="Fermer">✕</button>
+                <button class="lb-prev" id="lbPrev" aria-label="Précédent">‹</button>
+                <img id="lbImg" alt="Photo galerie Mara’Lanca" />
+                <button class="lb-next" id="lbNext" aria-label="Suivant">›</button>
+            </div>
+        </section>
+
         <!-- AGENDA -->
         <section id="agenda" class="container">
             <div class="sec-head">
                 <h2>Agenda – Où nous rencontrer</h2>
-                <p>Tous les événements où les Mara’Lanca participent : rencontres, lives, actions solidaires,
-                    entraînements ouverts. Mises à jour en continu.</p>
+                <p>Plusieurs événements affichés en cartes : visuel, infos clés et actions rapides.</p>
             </div>
 
-            <div class="reveal" style="display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:12px">
-                <button class="btn" id="f_upcoming" style="border-color:#e7e2da">À venir</button>
-                <button class="btn" id="f_past" style="border-color:#e7e2da">Passés</button>
-                <button class="btn" id="f_all" style="border-color:#e7e2da">Tous</button>
+            <div class="ag-header reveal">
+                <input id="ag_q" class="ag-search" placeholder="Rechercher (titre, ville, type)">
             </div>
 
-            <!-- Iframe Google Agenda (optionnel) -->
-            <div class="reveal"
-                style="background:#fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow:hidden; margin-bottom: var(--gap)">
-                <div
-                    style="aspect-ratio: 16/9; background:linear-gradient(130deg,#e9edf3,#f6f8fb); display:grid; place-items:center; color:#667085">
-                    <div style="padding:1rem; text-align:center">
-                        <strong>Intégrez votre Google Agenda public ici</strong><br>
-                        <small>Collez l’iframe : Google Agenda → Paramètres → Intégrer</small>
-                    </div>
-                </div>
-                <!-- Exemple :
-        <iframe style="width:100%; height:640px; border:0" src="https://calendar.google.com/calendar/embed?src=VOTRE_CAL_PUBLIC" loading="lazy"></iframe>
-        -->
+            <div class="ag-filters reveal">
+                <button class="btn is-active" data-filter="upcoming" id="f_upcoming">À venir</button>
+                <button class="btn" data-filter="today" id="f_today">Aujourd’hui</button>
+                <button class="btn" data-filter="past" id="f_past">Passés</button>
+                <button class="btn" data-filter="all" id="f_all">Tous</button>
             </div>
 
-            <div id="agendaList" class="news"></div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="container">
-            <div class="sec-head">
-                <h2>Contact WhatsApp</h2>
-                <p>Le plus simple et le plus rapide : écrivez‑nous directement sur WhatsApp (comme pour l’Élan
-                    Bigourdan). On répond vite.</p>
+            <div id="agGrid" class="ag-grid"></div>
+            <div id="agFallback"
+                style="margin-top:12px;background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:18px;">
+                Chargement des événements…
             </div>
-            <div class="contact">
-                <form class="reveal" id="waForm" onsubmit="event.preventDefault(); sendWhatsApp();">
-                    <div class="grid">
-                        <div>
-                            <label for="nom">Nom / Société</label>
-                            <input id="nom" name="nom" placeholder="Votre nom ou celui de votre entreprise" required>
-                        </div>
-                        <div>
-                            <label for="type">Je suis…</label>
-                            <select id="type" name="type">
-                                <option>Partenaire potentiel</option>
-                                <option>Donateur / Mécène</option>
-                                <option>Média / Presse</option>
-                                <option>Bénévole</option>
-                                <option>Autre</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <div>
-                            <label for="dest">Destinataire</label>
-                            <select id="dest" name="dest">
-                                <option value="team">Équipe Mara’Lanca (numéro principal)</option>
-                                <option value="com">Contact Communication</option>
-                                <option value="part">Contact Partenariats</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="tel">Votre téléphone (optionnel)</label>
-                            <input id="tel" name="tel" placeholder="06 12 34 56 78">
-                        </div>
-                    </div>
-                    <div class="grid grid-1">
-                        <div>
-                            <label for="msg">Message</label>
-                            <textarea id="msg" name="message"
-                                placeholder="Bonjour les Mara’Lanca, j’aimerais vous rencontrer lors de…"></textarea>
-                        </div>
-                    </div>
-                    <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
-                        <button class="btn btn-primary" type="submit">Contacter sur WhatsApp</button>
-                        <a class="btn" style="border-color:#e7e2da" id="waDirect" href="#">Ouvrir WhatsApp
-                            maintenant</a>
-                    </div>
-                    <small style="display:block; margin-top:.6rem; color:var(--mute)">Astuce : personnalisez votre
-                        message ci‑dessus. Le clic ouvrira WhatsApp avec votre texte pré‑rempli.</small>
-                </form>
 
-                <aside class="aside reveal">
-                    <h3>Infos pratiques</h3>
-                    <ul class="list">
-                        <li>Réponse rapide sur WhatsApp</li>
-                        <li>Rencontres lors des événements de l’Agenda</li>
-                        <li>Kit média et dossier partenaire sur demande</li>
-                    </ul>
-                    <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
-                    <h3>Réseaux</h3>
-                    <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
-                        <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
-                        <a class="btn btn-ghost" href="#" aria-label="TikTok">TikTok</a>
-                        <a class="btn btn-ghost" href="#" aria-label="Facebook">Facebook</a>
-                        <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
-                    </div>
-                </aside>
-            </div>
+            <!-- Données par défaut (peut être remplacé par assets/events.json) -->
+            <script type="application/json" id="events-data">
+      {
+        "events": [
+          { "title": "Café-rencontre partenaires – Dax", "type":"ÉVÉNEMENT", "start":"2025-10-23T18:30", "end":"2025-10-23T20:00", "city":"Dax", "venue":"Maison des Associations", "cover":"assets/events/dax.jpg", "wa":true },
+          { "title": "Live Instagram – Prépa navigation", "type":"LIVE", "start":"2025-10-28T20:00", "end":"2025-10-28T21:00", "city":"Instagram", "venue":"@mara.lanca", "cover":"assets/events/live.jpg", "wa":true },
+          { "title": "Stand Cœur de Gazelles – Marché local", "type":"SOLIDAIRE", "start":"2025-11-09T10:00", "end":"2025-11-09T16:00", "city":"Hossegor", "venue":"Marché central", "cover":"assets/events/hossegor.jpg", "wa":true }
+        ]
+      }
+      </script>
         </section>
     </main>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container" style="padding-top:0">
+        <div class="sec-head">
+            <h2>Contact WhatsApp</h2>
+            <p>Le plus simple et le plus rapide : écrivez-nous directement sur WhatsApp. Ou, si vous préférez,
+                envoyez-nous un e-mail.</p>
+        </div>
+        <div class="contact">
+            <form class="reveal" id="waForm" onsubmit="event.preventDefault(); sendWhatsApp();">
+                <div class="grid">
+                    <div><label for="nom">Nom / Société</label><input id="nom" name="nom"
+                            placeholder="Votre nom ou celui de votre entreprise" required></div>
+                    <div><label for="type">Je suis…</label><select id="type" name="type">
+                            <option>Partenaire potentiel</option>
+                            <option>Donateur / Mécène</option>
+                            <option>Média / Presse</option>
+                            <option>Bénévole</option>
+                            <option>Autre</option>
+                        </select></div>
+                </div>
+                <div class="grid">
+                    <div><label for="dest">Destinataire</label><select id="dest" name="dest">
+                            <option value="team">Équipe Mara’Lanca (numéro principal)</option>
+                            <option value="com">Contact Communication</option>
+                            <option value="part">Contact Partenariats</option>
+                        </select></div>
+                    <div><label for="tel">Votre téléphone (optionnel)</label><input id="tel" name="tel"
+                            placeholder="06 12 34 56 78"></div>
+                </div>
+                <div class="grid grid-1">
+                    <div><label for="msg">Message</label><textarea id="msg" name="message"
+                            placeholder="Bonjour les Mara’Lanca, j’aimerais vous rencontrer lors de…"></textarea></div>
+                </div>
+                <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
+                    <button class="btn btn-primary" type="submit">Contacter sur WhatsApp</button>
+                    <a class="btn" style="border-color:#e7e2da" id="mailDirect" href="#">✉️ Envoyer un e-mail à
+                        l’équipe</a>
+                </div>
+                <small style="display:block; margin-top:.6rem; color:var(--mute)">Astuce : personnalisez votre message
+                    ci-dessus. Le clic ouvrira WhatsApp ou votre client email avec votre texte pré-rempli.</small>
+            </form>
+
+            <aside class="aside reveal">
+                <h3>Infos pratiques</h3>
+                <ul class="list">
+                    <li>Réponse rapide sur WhatsApp</li>
+                    <li>Rencontres lors des événements de l’Agenda</li>
+                    <li>Kit média et dossier partenaire sur demande</li>
+                </ul>
+                <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
+                <h3>Réseaux</h3>
+                <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
+                    <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
+                    <a class="btn btn-ghost" href="#" aria-label="TikTok">TikTok</a>
+                    <a class="btn btn-ghost" href="#" aria-label="Facebook">Facebook</a>
+                    <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
+                </div>
+            </aside>
+        </div>
+    </section>
 
     <a class="floating-donate" href="https://www.helloasso.com/associations/mara-oses/formulaires/4" target="_blank"
         rel="noopener noreferrer" aria-label="Faire un don HelloAsso">❤️ Faire un don</a>
@@ -1165,88 +1456,44 @@
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // Reveal on scroll
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
-        }, { threshold: .18 });
+        const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }) }, { threshold: .18 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
         // Subtle header shadow on scroll
-        const siteHeader = document.querySelector('header.site');
-        let lastY = 0;
-        addEventListener('scroll', () => {
-            const y = scrollY;
-            if (y > 8 && lastY <= 8) siteHeader.style.boxShadow = '0 8px 20px rgba(0,0,0,.06)';
-            if (y <= 8 && lastY > 8) siteHeader.style.boxShadow = 'none';
-            lastY = y;
-        });
+        const siteHeader = document.querySelector('header.site'); let lastY = 0;
+        addEventListener('scroll', () => { const y = scrollY; if (y > 8 && lastY <= 8) siteHeader.style.boxShadow = '0 8px 20px rgba(0,0,0,.06)'; if (y <= 8 && lastY > 8) siteHeader.style.boxShadow = 'none'; lastY = y; });
 
         // ===== WhatsApp contact =====
-        const WA_NUMBERS = {
-            team: '+33600000000',      // numéro principal équipe (à remplacer)
-            com: '+33600000001',      // contact communication (optionnel)
-            part: '+33600000002'       // contact partenariats (optionnel)
-        };
-
-        function buildWaUrl(number, text) {
-            const clean = (number || '').replace(/[^0-9+]/g, '');
-            const msg = encodeURIComponent(text || '');
-            // Utilise wa.me qui redirige vers app ou web automatiquement
-            return `https://wa.me/${clean.replace('+', '')}${msg ? `?text=${msg}` : ''}`;
-        }
-
+        const WA_NUMBERS = { team: '+33600000000', com: '+33600000001', part: '+33600000002' };
+        function buildWaUrl(number, text) { const clean = (number || '').replace(/[^0-9+]/g, ''); const msg = encodeURIComponent(text || ''); return `https://wa.me/${clean.replace('+', '')}${msg ? `?text=${msg}` : ''}`; }
         function sendWhatsApp() {
             const nom = document.getElementById('nom').value.trim();
             const type = document.getElementById('type').value;
             const tel = document.getElementById('tel').value.trim();
             const msg = document.getElementById('msg').value.trim();
             const dest = document.getElementById('dest').value;
-
-            const text = [
-                `Bonjour, ici ${nom} (${type}).`,
-                msg ? `
-
-${msg}` : '',
-                tel ? `
-
-Mon téléphone : ${tel}` : '',
-                `
-
-— Message envoyé depuis le site Mara’Lanca`
-            ].join('');
-
+            const text = [`Bonjour, ici ${nom} (${type}).`, msg ? `\n\n${msg}` : '', tel ? `\n\nMon téléphone : ${tel}` : '', `\n\n— Message envoyé depuis le site Mara’Lanca`].join('');
             const wa = buildWaUrl(WA_NUMBERS[dest] || WA_NUMBERS.team, text);
             window.open(wa, '_blank');
         }
-
-        // Direct link updates when typing
-        const waForm = document.getElementById('waForm');
-        const waDirect = document.getElementById('waDirect');
-        if (waForm && waDirect) {
+        // Direct link updates when typing (mailto)
+        const waForm = document.getElementById('waForm'); const mailDirect = document.getElementById('mailDirect');
+        if (waForm && mailDirect) {
             waForm.addEventListener('input', () => {
                 const nom = document.getElementById('nom').value.trim() || 'Partenaire intéressé';
                 const type = document.getElementById('type').value;
                 const tel = document.getElementById('tel').value.trim();
                 const msg = document.getElementById('msg').value.trim();
-                const dest = document.getElementById('dest').value;
-                const text = [`Bonjour, ici ${nom} (${type}).`, msg ? `
-
-${msg}` : '', tel ? `
-
-Mon téléphone : ${tel}` : '', `
-
-— Message envoyé depuis le site Mara’Lanca`].join('');
-                waDirect.href = buildWaUrl(WA_NUMBERS[dest] || WA_NUMBERS.team, text);
+                const subject = `Contact Mara’Lanca – ${nom} (${type})`;
+                const body = [`Bonjour, ici ${nom} (${type}).`, msg ? `\n\n${msg}` : '', tel ? `\n\nMon téléphone : ${tel}` : '', `\n\n— Message envoyé depuis le site Mara’Lanca`].join('');
+                mailDirect.href = `mailto:contact@maralanca.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             });
         }
 
         // ===== Fundraising progress =====
-        function euro(n) {
-            try { return n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); }
-            catch (e) { return n + ' €'; }
-        }
+        function euro(n) { try { return n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); } catch (e) { return n + ' €'; } }
         (function () {
-            const fund = document.getElementById('fund');
-            if (!fund) return;
+            const fund = document.getElementById('fund'); if (!fund) return;
             const goal = parseFloat(fund.dataset.goal) || 0;
             const raised = parseFloat(fund.dataset.raised) || 0;
             const pct = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : 0;
@@ -1262,66 +1509,181 @@ Mon téléphone : ${tel}` : '', `
 
         // ===== Sponsors count =====
         (function () {
-            const container = document.getElementById('logos');
-            const out = document.getElementById('sponsorCount');
+            const container = document.getElementById('logos'); const out = document.getElementById('sponsorCount');
             if (!container || !out) return;
             const count = Array.from(container.querySelectorAll('.logo')).filter(el => el.querySelector('img') || (el.textContent || '').trim() !== '').length;
             out.textContent = count;
         })();
 
-        // ===== Agenda dynamique =====
-        const EVENTS = [
-            { title: 'Café-rencontre partenaires – Dax', type: 'ÉVÉNEMENT', start: '2025-10-23T18:30', end: '2025-10-23T20:00', city: 'Dax', venue: 'Maison des Associations', cta: 'Je m’inscris (WhatsApp)', ctaType: 'wa' },
-            { title: 'Live Instagram – Prépa navigation', type: 'LIVE', start: '2025-10-28T20:00', end: '2025-10-28T21:00', city: 'Instagram', venue: '@mara.lanca', cta: 'Recevoir le rappel', ctaType: 'wa' },
-            { title: 'Stand Cœur de Gazelles – Marché local', type: 'SOLIDAIRE', start: '2025-11-09T10:00', end: '2025-11-09T16:00', city: 'Hossegor', venue: 'Marché central', cta: 'Je passe vous voir', ctaType: 'wa' }
-        ];
+        // ===== Gallery Lightbox (supporte .slide[data-gallery-item]) =====
+        (function () {
+            const items = Array.from(document.querySelectorAll('[data-gallery-item]'));
+            const lb = document.getElementById('lb');
+            const img = document.getElementById('lbImg');
+            const btnClose = document.getElementById('lbClose');
+            const btnPrev = document.getElementById('lbPrev');
+            const btnNext = document.getElementById('lbNext');
+            let i = -1;
+            function open(idx) { i = idx; const el = items[i]; if (!el) return; img.src = el.dataset.src || el.querySelector('img')?.src; lb.classList.add('on'); document.body.style.overflow = 'hidden'; }
+            function close() { lb.classList.remove('on'); img.removeAttribute('src'); document.body.style.overflow = ''; }
+            function prev() { if (!items.length) return; i = (i - 1 + items.length) % items.length; open(i); }
+            function next() { if (!items.length) return; i = (i + 1) % items.length; open(i); }
+            items.forEach((el, idx) => el.addEventListener('click', () => open(idx)));
+            btnClose.addEventListener('click', close);
+            btnPrev.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+            btnNext.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+            lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+            addEventListener('keydown', (e) => { if (!lb.classList.contains('on')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); });
+        })();
 
+        // ===== Carousel auto-défilant infini =====
+        (function () {
+            const wrap = document.getElementById('galCarousel');
+            const track = document.getElementById('galTrack');
+            if (!wrap || !track) return;
+
+            const SPEED = 0.08; // pixels/ms
+            let rafId = null, last = 0, x = 0, running = true;
+
+            // Duplique les slides pour créer une boucle
+            const slides = Array.from(track.children);
+            track.append(...slides.map(s => s.cloneNode(true)));
+
+            function widthOf(el) { const cs = getComputedStyle(el); return el.getBoundingClientRect().width + parseFloat(cs.marginLeft) + parseFloat(cs.marginRight); }
+            function totalHalfWidth() { return slides.reduce((acc, s) => acc + widthOf(s), 0) + (slides.length - 1) * parseFloat(getComputedStyle(track).gap || 0); }
+            const halfW = totalHalfWidth();
+
+            function tick(ts) {
+                if (!running) { last = ts; rafId = requestAnimationFrame(tick); return; }
+                if (!last) last = ts;
+                const dt = ts - last; last = ts;
+                x -= SPEED * dt;
+                if (Math.abs(x) >= halfW) x += halfW; // reset doux
+                track.style.transform = `translate3d(${x}px,0,0)`;
+                rafId = requestAnimationFrame(tick);
+            }
+
+            // Pause au survol / touch
+            wrap.addEventListener('mouseenter', () => { running = false; });
+            wrap.addEventListener('mouseleave', () => { running = true; });
+            wrap.addEventListener('touchstart', () => { running = false; }, { passive: true });
+            wrap.addEventListener('touchend', () => { running = true; });
+
+            // Nav boutons
+            const btnPrev = wrap.querySelector('.gal-prev');
+            const btnNext = wrap.querySelector('.gal-next');
+            const step = () => Math.min(halfW / slides.length, 420);
+            btnPrev?.addEventListener('click', () => { x = Math.min(x + step(), 0); track.style.transform = `translate3d(${x}px,0,0)`; });
+            btnNext?.addEventListener('click', () => { x -= step(); track.style.transform = `translate3d(${x}px,0,0)`; });
+
+            rafId = requestAnimationFrame(tick);
+        })();
+
+        // ===== Agenda dynamique – Listing =====
+        const DEFAULT_EVENTS = [
+            { title: 'Café-rencontre partenaires – Dax', type: 'ÉVÉNEMENT', start: '2025-10-23T18:30', end: '2025-10-23T20:00', city: 'Dax', venue: 'Maison des Associations', cover: 'assets/events/dax.jpg', wa: true },
+            { title: 'Live Instagram – Prépa navigation', type: 'LIVE', start: '2025-10-28T20:00', end: '2025-10-28T21:00', city: 'Instagram', venue: '@mara.lanca', cover: 'assets/events/live.jpg', wa: true },
+            { title: 'Stand Cœur de Gazelles – Marché local', type: 'SOLIDAIRE', start: '2025-11-09T10:00', end: '2025-11-09T16:00', city: 'Hossegor', venue: 'Marché central', cover: 'assets/events/hossegor.jpg', wa: true }
+        ];
+        async function loadEvents() {
+            try { const r = await fetch('assets/events.json', { cache: 'no-store' }); if (!r.ok) throw 0; const j = await r.json(); if (Array.isArray(j) && j.length) return j; } catch (e) { }
+            try { const raw = document.getElementById('events-data')?.textContent || ''; const j = JSON.parse(raw); if (Array.isArray(j.events)) return j.events; } catch (e) { }
+            return DEFAULT_EVENTS;
+        }
         function fmtDateRange(startStr, endStr) {
             const optsDay = { weekday: 'long', day: '2-digit', month: 'long' };
             const optsTime = { hour: '2-digit', minute: '2-digit' };
-            const s = new Date(startStr);
-            const e = endStr ? new Date(endStr) : null;
+            const s = new Date(startStr); const e = endStr ? new Date(endStr) : null;
             const d = s.toLocaleDateString('fr-FR', optsDay);
             const t1 = s.toLocaleTimeString('fr-FR', optsTime);
             const t2 = e ? e.toLocaleTimeString('fr-FR', optsTime) : null;
             return e ? `${d} – ${t1} · ${t2}` : `${d} – ${t1}`;
         }
-
-        function cardFor(ev) {
-            const coverLabel = ev.type || 'EVENT';
+        function isToday(d) { const x = new Date(d), n = new Date(); return x.toDateString() === n.toDateString(); }
+        function isPast(ev) { const n = new Date(); return new Date(ev.end || ev.start) < n; }
+        function icsFor(ev) {
+            const dt = (d) => new Date(d).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            const uid = `${Date.now()}-${Math.random().toString(36).slice(2)}@maralanca`;
+            const loc = [ev.city, ev.venue].filter(Boolean).join(' - ');
+            const body = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mara'Lanca//Agenda//FR
+BEGIN:VEVENT
+UID:${uid}
+DTSTAMP:${dt(new Date())}
+DTSTART:${dt(ev.start)}
+${ev.end ? `DTEND:${dt(ev.end)}\n` : ''}SUMMARY:${(ev.title || 'Événement').replace(/,/g, ' ')}
+LOCATION:${(loc || '').replace(/,/g, ' ')}
+END:VEVENT
+END:VCALENDAR`;
+            return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(body);
+        }
+        function card(ev) {
             const when = fmtDateRange(ev.start, ev.end);
             const where = [ev.city, ev.venue].filter(Boolean).join(' • ');
-            const btn = ev.cta || 'Je viens';
+            const status = isToday(ev.start) ? 'today' : (isPast(ev) ? 'past' : 'next');
+            const badge = status === 'today' ? 'AUJOURD\'HUI' : (status === 'past' ? 'TERMINÉ' : 'À VENIR');
+            const badgeStyle = status === 'past' ? 'background:#9aa3ad' : 'background:#1d3557';
             return `
-        <article class="post reveal">
-          <div class="cover">${coverLabel}</div>
-          <div class="body">
-            <h3>${ev.title}</h3>
-            <p style="color:var(--mute)">${when}${where ? ' • ' + where : ''}</p>
-            <div class="cta">${ev.ctaType === 'wa' ? '<a class="btn btn-primary" href="#contact">' + btn + '</a>' : ''}</div>
+      <article class="ag-card reveal">
+        <div class="ag-cover">
+          <img src="${ev.cover || 'assets/events/placeholder.jpg'}" alt="${ev.title}">
+          <span class="ag-badge" style="${badgeStyle}">${badge}</span>
+          <span class="ag-type">${ev.type || 'ÉVÉNEMENT'}</span>
+        </div>
+        <div class="ag-body">
+          <h3 class="ag-title">${ev.title}</h3>
+          <div class="ag-meta">${when}${where ? ' • ' + where : ''}</div>
+          <div class="ag-cta">
+            <a class="btn btn-primary" href="${icsFor(ev)}" download>Ajouter au calendrier</a>
           </div>
-        </article>`;
+        </div>
+      </article>`;
         }
+        (async function initAgendaList() {
+            const grid = document.getElementById('agGrid');
+            const search = document.getElementById('ag_q');
+            const fallback = document.getElementById('agFallback');
+            function safeShow(msg) { if (grid) grid.innerHTML = `<div class="ag-body" style="padding:22px">${msg}</div>`; if (fallback) fallback.remove(); }
 
-        function renderAgenda(filter = 'upcoming') {
-            const list = document.getElementById('agendaList');
-            if (!list) return;
-            const now = new Date();
-            let data = [...EVENTS].sort((a, b) => new Date(a.start) - new Date(b.start));
-            if (filter === 'upcoming') data = data.filter(ev => new Date(ev.end || ev.start) >= now);
-            if (filter === 'past') data = data.filter(ev => new Date(ev.end || ev.start) < now);
-            list.innerHTML = data.map(cardFor).join('') || '<p style="color:var(--mute)">Aucun événement pour le moment. Revenez vite 👀</p>';
-            list.querySelectorAll('.reveal').forEach(el => io.observe(el));
-        }
+            try {
+                const all = (await loadEvents()).sort((a, b) => new Date(a.start) - new Date(b.start));
+                if (!all.length) { safeShow('Aucun événement pour le moment.'); return; }
+                let currentFilter = 'upcoming';
+                let filtered = all.slice();
 
-        (function () {
-            renderAgenda('upcoming');
-            const up = document.getElementById('f_upcoming');
-            const pa = document.getElementById('f_past');
-            const all = document.getElementById('f_all');
-            up && up.addEventListener('click', () => renderAgenda('upcoming'));
-            pa && pa.addEventListener('click', () => renderAgenda('past'));
-            all && all.addEventListener('click', () => renderAgenda('all'));
+                function apply() {
+                    const now = new Date();
+                    let data = filtered.slice();
+                    if (currentFilter === 'upcoming') data = data.filter(ev => new Date(ev.end || ev.start) >= now);
+                    if (currentFilter === 'past') data = data.filter(ev => new Date(ev.end || ev.start) < now);
+                    if (currentFilter === 'today') data = data.filter(ev => new Date(ev.start).toDateString() === now.toDateString());
+                    if (currentFilter === 'all') data = data;
+                    grid.innerHTML = data.map(card).join('') || '<p style="color:var(--mute)">Aucun événement trouvé.</p>';
+                    grid.querySelectorAll('.reveal').forEach(el => io.observe(el));
+                    if (fallback) fallback.remove();
+                }
+
+                document.querySelectorAll('#agenda .ag-filters .btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('#agenda .ag-filters .btn').forEach(b => b.classList.remove('is-active'));
+                        btn.classList.add('is-active');
+                        currentFilter = btn.dataset.filter;
+                        apply();
+                    });
+                });
+
+                search && search.addEventListener('input', () => {
+                    const q = (search.value || '').toLowerCase();
+                    filtered = all.filter(ev => [ev.title, ev.city, ev.type, ev.venue].join(' ').toLowerCase().includes(q));
+                    apply();
+                });
+
+                apply();
+            } catch (e) {
+                console.error(e);
+                safeShow('Une erreur est survenue lors du chargement de l\'agenda.');
+            }
         })();
     </script>
 </body>
