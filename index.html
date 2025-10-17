@@ -42,10 +42,10 @@
     <style>
         :root {
             --sand: #D6A36A;
-            --night: #1D3557;
-            --cream: #FAF7F3;
+            --night: #546030;
+            --cream: #b5ba9a;
             --ink: #0F172A;
-            --mute: #5f6b7a;
+            --mute: #546030;
             --white: #ffffff;
             --shadow: 0 10px 30px rgba(0, 0, 0, .08);
             --radius: 18px;
@@ -83,6 +83,8 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            color: #fff;
+            background-color: #546030;
             gap: .5rem;
             padding: .9rem 1.2rem;
             border-radius: 999px;
@@ -104,7 +106,7 @@
         }
 
         .btn-primary:hover {
-            background: #13253f
+            background: #b5ba9a
         }
 
         .btn-ghost {
@@ -118,12 +120,12 @@
         }
 
         .btn-hello {
-            background: #00A86B;
+            background: #e5994b;
             color: #fff
         }
 
         .btn-hello:hover {
-            background: #0b8a59
+            background: #eb6123
         }
 
         .chip {
@@ -465,12 +467,36 @@
         }
 
         /* Partners */
+        /* Grille uniforme sans blocs */
         .logos {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 14px;
-            align-items: stretch
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+            margin-top: 1rem;
         }
+
+        .logos a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .25s ease, filter .25s ease;
+        }
+
+        .logos img {
+            height: 80px;
+            /* taille uniforme des logos */
+            width: auto;
+            object-fit: contain;
+            transition: transform .25s ease, filter .25s ease;
+        }
+
+        .logos a:hover img {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.05);
+        }
+
 
         @media (max-width:980px) {
             .logos {
@@ -484,36 +510,8 @@
             }
         }
 
-        .logo {
-            background: #fff;
-            height: 90px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            display: grid;
-            place-items: center;
-            padding: 10px;
-            overflow: hidden;
-            position: relative
-        }
 
-        .logo img {
-            max-width: 80%;
-            max-height: 70%;
-            object-fit: contain;
-            filter: grayscale(100%);
-            transition: transform .2s ease, filter .2s ease
-        }
 
-        .logo:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.03)
-        }
-
-        .logo span {
-            color: #9aa3ad;
-            font-weight: 700;
-            letter-spacing: .4px
-        }
 
         .fund {
             background: #fff;
@@ -840,8 +838,6 @@
             font-size: .9rem
         }
 
-        /* texte centré + bouton réduit */
-
         /* Contact */
         .contact {
             display: grid;
@@ -892,7 +888,7 @@
         }
 
         .aside {
-            background: linear-gradient(180deg, var(--night), #263d64);
+            background: linear-gradient(180deg, #6c7445 0%, #9da57a 60%, #cfc9a8 100%);
             color: #e8eef8;
             border-radius: var(--radius);
             padding: 24px;
@@ -903,6 +899,17 @@
             color: #fff;
             margin-top: 0
         }
+
+        .aside a[aria-label] svg {
+            transition: transform .2s ease, fill .2s ease;
+        }
+
+        .aside a[aria-label]:hover svg {
+            transform: scale(1.15);
+            fill: #eb6123;
+            /* accent orange de tes CTA */
+        }
+
 
         .list {
             margin: 0;
@@ -931,7 +938,7 @@
             z-index: 60;
             padding: .9rem 1.1rem;
             border-radius: 999px;
-            background: #00A86B;
+            background: #eb6123;
             color: #fff;
             text-decoration: none;
             font-weight: 700;
@@ -1230,7 +1237,7 @@
             </div>
 
             <!-- Progression de la campagne -->
-            <div class="fund reveal" id="fund" data-goal="64000" data-raised="6490">
+            <div class="fund reveal" id="fund" data-goal="64000" data-raised="5500">
                 <div class="row"><strong>Campagne 2027</strong><span id="pct">0%</span></div>
                 <div class="progress" aria-label="Progression de la campagne">
                     <div class="bar" id="bar"></div>
@@ -1239,14 +1246,36 @@
                             id="goal">0 €</span></small></div>
             </div>
 
+            <!-- PARTENAIRES -->
             <div class="logos reveal" aria-label="Logos partenaires" id="logos">
-                <div class="logo"><span>LOGO</span></div>
-                <div class="logo"><span>LOGO</span></div>
-                <div class="logo"><span>LOGO</span></div>
-                <div class="logo"><span>LOGO</span></div>
-                <div class="logo"><span>LOGO</span></div>
-                <div class="logo"><span>LOGO</span></div>
+                <a href="https://www.charpente-laffargue.com/" target="_blank" rel="noopener" aria-label="Sponsor 1">
+                    <img src="assets/sponsor/charpente laffargue.jpg" alt="Sponsor 1">
+                </a>
+
+                <a href="https://www.pompes-funebres-galbrun-heslot.fr/" target="_blank" rel="noopener"
+                    aria-label="Sponsor 2">
+                    <img src="assets/sponsor/pompesfunebres.jpg" alt="Sponsor 2">
+                </a>
+
+                <a href="https://www.exemple-sponsor3.fr" target="_blank" rel="noopener" aria-label="Sponsor 3">
+                    <img src="assets/logos/sponsor3.png" alt="Sponsor 3">
+                </a>
+
+                <a href="https://www.exemple-sponsor4.fr" target="_blank" rel="noopener" aria-label="Sponsor 4">
+                    <img src="assets/logos/sponsor4.png" alt="Sponsor 4">
+                </a>
+
+                <a href="https://www.exemple-sponsor5.fr" target="_blank" rel="noopener" aria-label="Sponsor 5">
+                    <img src="assets/logos/sponsor5.png" alt="Sponsor 5">
+                </a>
+
+                <a href="https://www.exemple-sponsor6.fr" target="_blank" rel="noopener" aria-label="Sponsor 6">
+                    <img src="assets/logos/sponsor6.png" alt="Sponsor 6">
+                </a>
             </div>
+
+
+
 
             <div class="cta" style="margin-top:1rem">
                 <a class="btn" style="border-color:#e7e2da" href="#journal">Voir nos actualités</a>
@@ -1302,24 +1331,24 @@
 
                 <div class="gal-track" id="galTrack">
                     <figure class="slide" data-gallery-item data-cap="Entraînement dunes"
-                        data-src="assets/gallery/dunes.jpg">
-                        <img src="assets/gallery/dunes.jpg" alt="Entraînement dans les dunes">
-                        <figcaption class="gal-cap">Entraînement dunes</figcaption>
+                        data-src="assets/gallerie/Vide Grenier Labouheyre 220625.jpg">
+                        <img src="assets/gallerie/Vide Grenier Labouheyre 220625.jpg" alt="Entraînement dans les dunes">
+                        <figcaption class="gal-cap">Vide Grenier Labouheyre 22/06/25</figcaption>
                     </figure>
                     <figure class="slide" data-gallery-item data-cap="Atelier navigation"
-                        data-src="assets/gallery/navigation.jpg">
-                        <img src="assets/gallery/navigation.jpg" alt="Atelier navigation">
-                        <figcaption class="gal-cap">Atelier navigation</figcaption>
+                        data-src="assets/gallerie/Marché Nocturne 250725.jpg">
+                        <img src="assets/gallerie/Marché Nocturne 250725.jpg" alt="Atelier navigation">
+                        <figcaption class="gal-cap">Marché Nocturne 25/07/25</figcaption>
                     </figure>
                     <figure class="slide" data-gallery-item data-cap="Rencontre associative"
-                        data-src="assets/gallery/asso.jpg">
-                        <img src="assets/gallery/asso.jpg" alt="Rencontre associative">
-                        <figcaption class="gal-cap">Rencontre associative</figcaption>
+                        data-src="assets/gallerie/Festi'Run 130925.jpg">
+                        <img src="assets/gallerie/Festi'Run 130925.jpg" alt="Rencontre associative">
+                        <figcaption class="gal-cap">Festi'Run 13/09/25</figcaption>
                     </figure>
                     <figure class="slide" data-gallery-item data-cap="Bivouac test"
-                        data-src="assets/gallery/bivouac.jpg">
-                        <img src="assets/gallery/bivouac.jpg" alt="Bivouac test">
-                        <figcaption class="gal-cap">Bivouac test</figcaption>
+                        data-src="assets/gallerie/Octobre Rose.jpg">
+                        <img src="assets/gallerie/Octobre Rose.jpg" alt="Bivouac test">
+                        <figcaption class="gal-cap">Octobre Rose 10/2025</figcaption>
                     </figure>
                     <figure class="slide" data-gallery-item data-cap="Mécanique & 4x4"
                         data-src="assets/gallery/meca.jpg">
@@ -1429,20 +1458,49 @@
                     <li>Rencontres lors des événements de l’Agenda</li>
                     <li>Kit média et dossier partenaire sur demande</li>
                 </ul>
+
                 <hr style="border:none; border-top:1px solid rgba(255,255,255,.15); margin: 18px 0;">
+
                 <h3>Réseaux</h3>
                 <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
-                    <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
-                    <a class="btn btn-ghost" href="#" aria-label="TikTok">TikTok</a>
-                    <a class="btn btn-ghost" href="#" aria-label="Facebook">Facebook</a>
-                    <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/mara.oses40?igsh=MXB5aDF2d3VmZWI1Zg%3D%3D&utm_source=qr"
+                        target="_blank" rel="noopener" aria-label="Instagram"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:0 4px 10px rgba(0,0,0,.08)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#546030"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.5A4.26 4.26 0 0 0 3.5 7.75v8.5A4.26 4.26 0 0 0 7.75 20.5h8.5A4.26 4.26 0 0 0 20.5 16.25v-8.5A4.26 4.26 0 0 0 16.25 3.5Zm4.25 4.2A4.3 4.3 0 1 1 7.7 12a4.3 4.3 0 0 1 4.3-4.3Zm0 1.5a2.8 2.8 0 1 0 2.8 2.8 2.8 2.8 0 0 0-2.8-2.8Zm5.1-.45a.9.9 0 1 1 .9-.9.9.9 0 0 1-.9.9Z" />
+                        </svg>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@mara.oses40?_t=ZN-90KAnLD6gwY&_r=1" target="_blank" rel="noopener"
+                        aria-label="TikTok"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:0 4px 10px rgba(0,0,0,.08)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#546030"
+                            viewBox="0 0 24 24">
+                            <path d="M16 1a5 5 0 0 0 5 5v4a9 9 0 0 1-5-1.5V15a7 7 0 1 1-7-7v4a3 3 0 1 0 3 3V1h4Z" />
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/17DEgbMjgG/?mibextid=wwXIfr" target="_blank" rel="noopener"
+                        aria-label="Facebook"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:0 4px 10px rgba(0,0,0,.08)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#546030"
+                            viewBox="0 0 24 24">
+                            <path d="M13 3h4V0h-4a5 5 0 0 0-5 5v3H5v4h3v12h4V12h3l1-4h-4V5a1 1 0 0 1 1-1Z" />
+                        </svg>
+                    </a>
                 </div>
             </aside>
         </div>
     </section>
 
+    <!-- BOUTON FLOTTANT DON — cœur blanc directement -->
     <a class="floating-donate" href="https://www.helloasso.com/associations/mara-oses/formulaires/4" target="_blank"
-        rel="noopener noreferrer" aria-label="Faire un don HelloAsso">❤️ Faire un don</a>
+        rel="noopener noreferrer" aria-label="Faire un don HelloAsso">🤍 Faire un don</a>
 
     <footer>
         <div class="container foot">
@@ -1476,19 +1534,33 @@
             const wa = buildWaUrl(WA_NUMBERS[dest] || WA_NUMBERS.team, text);
             window.open(wa, '_blank');
         }
-        // Direct link updates when typing (mailto)
-        const waForm = document.getElementById('waForm'); const mailDirect = document.getElementById('mailDirect');
-        if (waForm && mailDirect) {
-            waForm.addEventListener('input', () => {
-                const nom = document.getElementById('nom').value.trim() || 'Partenaire intéressé';
-                const type = document.getElementById('type').value;
-                const tel = document.getElementById('tel').value.trim();
-                const msg = document.getElementById('msg').value.trim();
-                const subject = `Contact Mara’Lanca – ${nom} (${type})`;
-                const body = [`Bonjour, ici ${nom} (${type}).`, msg ? `\n\n${msg}` : '', tel ? `\n\nMon téléphone : ${tel}` : '', `\n\n— Message envoyé depuis le site Mara’Lanca`].join('');
-                mailDirect.href = `mailto:contact@maralanca.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            });
+        // ===== Mailto direct =====
+        const waForm = document.getElementById('waForm');
+        const mailDirect = document.getElementById('mailDirect');
+
+        if (mailDirect) {
+            // Valeur de base au chargement
+            mailDirect.href = 'mailto:mara.oses40@gmail.com?subject=Contact Mara’Lanca&body=Bonjour les Mara’Lanca,';
+
+            // Mise à jour dynamique quand l'utilisateur saisit dans le formulaire
+            if (waForm) {
+                waForm.addEventListener('input', () => {
+                    const nom = document.getElementById('nom').value.trim() || 'Partenaire intéressé';
+                    const type = document.getElementById('type').value;
+                    const tel = document.getElementById('tel').value.trim();
+                    const msg = document.getElementById('msg').value.trim();
+                    const subject = `Contact Mara’Lanca – ${nom} (${type})`;
+                    const body = [
+                        `Bonjour, ici ${nom} (${type}).`,
+                        msg ? `\n\n${msg}` : '',
+                        tel ? `\n\nMon téléphone : ${tel}` : '',
+                        `\n\n— Message envoyé depuis le site Mara’Lanca`
+                    ].join('');
+                    mailDirect.href = `mailto:mara.oses40@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                });
+            }
         }
+
 
         // ===== Fundraising progress =====
         function euro(n) { try { return n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); } catch (e) { return n + ' €'; } }
@@ -1515,7 +1587,7 @@
             out.textContent = count;
         })();
 
-        // ===== Gallery Lightbox (supporte .slide[data-gallery-item]) =====
+        // ===== Gallery Lightbox =====
         (function () {
             const items = Array.from(document.querySelectorAll('[data-gallery-item]'));
             const lb = document.getElementById('lb');
@@ -1684,6 +1756,49 @@ END:VCALENDAR`;
                 console.error(e);
                 safeShow('Une erreur est survenue lors du chargement de l\'agenda.');
             }
+        })();
+
+        /* ===== Hearts to white (global) ===== */
+        (function makeHeartsWhite() {
+            const HEARTS_IN = /(?:\u2764\uFE0F|\u2764|\u2665)/g; // ❤️, ❤, ♥
+            const HEART_WHITE = '🤍'; // white heart
+
+            function replaceInNode(node) {
+                if (node.nodeType !== Node.TEXT_NODE) return;
+                const t = node.nodeValue;
+                if (HEARTS_IN.test(t)) node.nodeValue = t.replace(HEARTS_IN, HEART_WHITE);
+            }
+            function walk(root) {
+                const skip = /^(script|style|textarea)$/i;
+                const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+                    acceptNode(n) {
+                        return n.parentElement && !skip.test(n.parentElement.tagName)
+                            ? NodeFilter.FILTER_ACCEPT
+                            : NodeFilter.FILTER_REJECT;
+                    }
+                });
+                let cur; while ((cur = walker.nextNode())) replaceInNode(cur);
+            }
+            // première passe
+            walk(document.body);
+            // observe les ajouts/edits dynamiques
+            const mo = new MutationObserver(muts => {
+                for (const m of muts) {
+                    m.addedNodes && m.addedNodes.forEach(n => {
+                        if (n.nodeType === Node.TEXT_NODE) replaceInNode(n);
+                        else if (n.nodeType === Node.ELEMENT_NODE) walk(n);
+                    });
+                    if (m.type === 'characterData') replaceInNode(m.target);
+                }
+            });
+            mo.observe(document.body, { childList: true, characterData: true, subtree: true });
+
+            // attributs courants
+            document.querySelectorAll('[title],[aria-label]').forEach(el => {
+                if (el.title) el.title = el.title.replace(HEARTS_IN, HEART_WHITE);
+                const al = el.getAttribute('aria-label');
+                if (al) el.setAttribute('aria-label', al.replace(HEARTS_IN, HEART_WHITE));
+            });
         })();
     </script>
 </body>
